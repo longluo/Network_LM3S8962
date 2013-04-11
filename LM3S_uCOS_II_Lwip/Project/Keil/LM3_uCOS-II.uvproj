@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>LM3_uCOS-II</TargetName>
+      <TargetName>LM3S_uCOS-II_Lwip</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>

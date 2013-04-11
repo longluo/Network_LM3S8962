@@ -346,7 +346,7 @@
               <MiscControls></MiscControls>
               <Define>rvmdk PART_LM3S8962</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Source\App\Head;..\..\Source\Hal\Evm\Head;..\..\Source\Hal\Oled\Head;..\..\Source\uCOS-II\Source\Head;..\..\Source\uCOS-II\Ports\Head;..\..\Source\LM3_Lib;..\..\Source\lwip-1.3.2\src\include;..\..\Source\lwip-1.3.2\src\include\ipv4;..\..\Source\lwip-1.3.2\arch\arch</IncludePath>
+              <IncludePath>..\..\Source\App\Head;..\..\Source\Hal\Evm\Head;..\..\Source\Hal\Oled\Head;..\..\Source\uCOS-II\Source\Head;..\..\Source\uCOS-II\Ports\Head;..\..\Source\LM3_Lib;..\..\Source\lwip-1.3.2\src\include;..\..\Source\lwip-1.3.2\src\include\ipv4;..\..\Source\lwip-1.3.2\arch\arch;..\..\Source\LM3_Lib\inc;..\..\Source\LM3_Lib\DriverLib;..\..\Source\lwip-1.3.2\arch</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
