@@ -1,0 +1,30 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uCOS_II_Lwip\Project\Keil\LM3_uCOS-II.uvproj
+Project File Date:  11/28/2011
+
+<h2>Output:</h2>
+Build target 'LM3S_uCOS-II_Lwip'
+compiling Main.c...
+..\..\Source\App\Src\Main.c(199): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c(200): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c(202): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c(203): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c(206): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c(207): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c(209): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c(210): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c(189): warning:  #550-D: variable "OSVersion" was set but never used
+..\..\Source\App\Src\Main.c(33): warning:  #177-D: variable "Task_UartStk" was declared but never referenced
+..\..\Source\App\Src\Main.c(34): warning:  #177-D: variable "Task_KeyStk" was declared but never referenced
+..\..\Source\App\Src\Main.c(164): warning:  #177-D: function "taskKey" was declared but never referenced
+compiling os_cpu_c.c...
+compiling Target.c...
+compiling rit128x96x4.c...
+linking...
+Program Size: Code=15946 RO-data=1142 RW-data=96 ZI-data=6920  
+FromELF: creating hex file...
+"..\..\OutPut\LM3_uCOS-II.axf" - 0 Error(s), 12 Warning(s).
