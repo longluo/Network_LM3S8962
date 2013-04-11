@@ -5,6 +5,7 @@
 *.lst
 *.__i
 *._i
+*._ia
 *.tra
 
 # Libraries
