@@ -1,0 +1,790 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\01.TI WorkSpace\11. My Design\UCOS-II\LM3_uCOS-II\Project\Keil\LM3_uCOS-II.uvproj
+Project File Date:  04/25/2011
+
+<h2>Output:</h2>
+Build target 'LM3_uCOS-II'
+compiling Target.c...
+..\..\Source\Hal\Evm\Target.c(19): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\Hal\Evm\Target.c:   #include <includes.h>
+..\..\Source\Hal\Evm\Target.c:                        ^
+..\..\Source\Hal\Evm\Target.c: ..\..\Source\Hal\Evm\Target.c: 0 warnings, 1 error
+compiling rit128x96x4.c...
+..\..\Source\Hal\Oled\rit128x96x4.c(35): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\Hal\Oled\rit128x96x4.c:   #include <includes.h>
+..\..\Source\Hal\Oled\rit128x96x4.c:                        ^
+..\..\Source\Hal\Oled\rit128x96x4.c: ..\..\Source\Hal\Oled\rit128x96x4.c: 0 warnings, 1 error
+assembling Startup.s...
+compiling os_cpu_c.c...
+..\..\Source\uCOS-II\Ports\os_cpu_c.c(20): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Ports\os_cpu_c.c:   #include <includes.h>
+..\..\Source\uCOS-II\Ports\os_cpu_c.c:                        ^
+..\..\Source\uCOS-II\Ports\os_cpu_c.c: ..\..\Source\uCOS-II\Ports\os_cpu_c.c: 0 warnings, 1 error
+assembling os_cpu_a.asm...
+compiling OS_CORE.C...
+..\..\Source\uCOS-II\Source\OS_CORE.C(17): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_CORE.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_CORE.C:                        ^
+..\..\Source\uCOS-II\Source\OS_CORE.C: ..\..\Source\uCOS-II\Source\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+..\..\Source\uCOS-II\Source\OS_FLAG.C(16): error:  #5: cannot open source input file "INCLUDES.H": No such file or directory
+..\..\Source\uCOS-II\Source\OS_FLAG.C:   #include "INCLUDES.H"
+..\..\Source\uCOS-II\Source\OS_FLAG.C:                        ^
+..\..\Source\uCOS-II\Source\OS_FLAG.C: ..\..\Source\uCOS-II\Source\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+..\..\Source\uCOS-II\Source\OS_MBOX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_MBOX.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_MBOX.C:                        ^
+..\..\Source\uCOS-II\Source\OS_MBOX.C: ..\..\Source\uCOS-II\Source\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+..\..\Source\uCOS-II\Source\OS_MEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_MEM.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_MEM.C:                        ^
+..\..\Source\uCOS-II\Source\OS_MEM.C: ..\..\Source\uCOS-II\Source\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+..\..\Source\uCOS-II\Source\OS_MUTEX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_MUTEX.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_MUTEX.C:                        ^
+..\..\Source\uCOS-II\Source\OS_MUTEX.C: ..\..\Source\uCOS-II\Source\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+..\..\Source\uCOS-II\Source\OS_Q.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_Q.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_Q.C:                        ^
+..\..\Source\uCOS-II\Source\OS_Q.C: ..\..\Source\uCOS-II\Source\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+..\..\Source\uCOS-II\Source\OS_SEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_SEM.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_SEM.C:                        ^
+..\..\Source\uCOS-II\Source\OS_SEM.C: ..\..\Source\uCOS-II\Source\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+..\..\Source\uCOS-II\Source\OS_TASK.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_TASK.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_TASK.C:                        ^
+..\..\Source\uCOS-II\Source\OS_TASK.C: ..\..\Source\uCOS-II\Source\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+..\..\Source\uCOS-II\Source\OS_TIME.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\OS_TIME.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\OS_TIME.C:                        ^
+..\..\Source\uCOS-II\Source\OS_TIME.C: ..\..\Source\uCOS-II\Source\OS_TIME.C: 0 warnings, 1 error
+compiling uCOS_II.C...
+..\..\Source\uCOS-II\Source\uCOS_II.C(15): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\uCOS_II.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\uCOS_II.C:                        ^
+..\..\Source\uCOS-II\Source\uCOS_II.C: ..\..\Source\uCOS-II\Source\uCOS_II.C: 0 warnings, 1 error
+compiling isr.c...
+..\..\Source\App\isr.c(19): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\App\isr.c:   #include <includes.h>
+..\..\Source\App\isr.c:                        ^
+..\..\Source\App\isr.c: ..\..\Source\App\isr.c: 0 warnings, 1 error
+compiling Main.c...
+..\..\Source\App\Main.c(19): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\App\Main.c:   #include <includes.h>
+..\..\Source\App\Main.c:                        ^
+..\..\Source\App\Main.c: ..\..\Source\App\Main.c: 0 warnings, 1 error
+Target not created
+Build target 'LM3_uCOS-II'
+assembling Startup.s...
+compiling Target.c...
+..\..\Source\Hal\Evm\Src\Target.c(19): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\Hal\Evm\Src\Target.c:   #include <includes.h>
+..\..\Source\Hal\Evm\Src\Target.c:                        ^
+..\..\Source\Hal\Evm\Src\Target.c: ..\..\Source\Hal\Evm\Src\Target.c: 0 warnings, 1 error
+compiling rit128x96x4.c...
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(35): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:   #include <includes.h>
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                        ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 0 warnings, 1 error
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c(20): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c:   #include <includes.h>
+..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c:                        ^
+..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c: ..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c: 0 warnings, 1 error
+compiling uCOS_II.C...
+..\..\Source\uCOS-II\Source\Src\uCOS_II.C(15): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\uCOS_II.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\uCOS_II.C:                        ^
+..\..\Source\uCOS-II\Source\Src\uCOS_II.C: ..\..\Source\uCOS-II\Source\Src\uCOS_II.C: 0 warnings, 1 error
+compiling OS_CORE.C...
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C(17): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+..\..\Source\uCOS-II\Source\Src\OS_FLAG.C(16): error:  #5: cannot open source input file "INCLUDES.H": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_FLAG.C:   #include "INCLUDES.H"
+..\..\Source\uCOS-II\Source\Src\OS_FLAG.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_FLAG.C: ..\..\Source\uCOS-II\Source\Src\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+..\..\Source\uCOS-II\Source\Src\OS_MBOX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_MBOX.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_MBOX.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_MBOX.C: ..\..\Source\uCOS-II\Source\Src\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+..\..\Source\uCOS-II\Source\Src\OS_MEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_MEM.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_MEM.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_MEM.C: ..\..\Source\uCOS-II\Source\Src\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C: ..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+..\..\Source\uCOS-II\Source\Src\OS_Q.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_Q.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_Q.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_Q.C: ..\..\Source\uCOS-II\Source\Src\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+..\..\Source\uCOS-II\Source\Src\OS_SEM.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_SEM.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_SEM.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_SEM.C: ..\..\Source\uCOS-II\Source\Src\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+..\..\Source\uCOS-II\Source\Src\OS_TASK.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_TASK.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_TASK.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_TASK.C: ..\..\Source\uCOS-II\Source\Src\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+..\..\Source\uCOS-II\Source\Src\OS_TIME.C(16): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\uCOS-II\Source\Src\OS_TIME.C:   #include "includes.h"
+..\..\Source\uCOS-II\Source\Src\OS_TIME.C:                        ^
+..\..\Source\uCOS-II\Source\Src\OS_TIME.C: ..\..\Source\uCOS-II\Source\Src\OS_TIME.C: 0 warnings, 1 error
+compiling Isr.c...
+..\..\Source\App\Src\Isr.c(19): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\App\Src\Isr.c:   #include <includes.h>
+..\..\Source\App\Src\Isr.c:                        ^
+..\..\Source\App\Src\Isr.c: ..\..\Source\App\Src\Isr.c: 0 warnings, 1 error
+compiling Main.c...
+..\..\Source\App\Src\Main.c(19): error:  #5: cannot open source input file "includes.h": No such file or directory
+..\..\Source\App\Src\Main.c:   #include <includes.h>
+..\..\Source\App\Src\Main.c:                        ^
+..\..\Source\App\Src\Main.c: ..\..\Source\App\Src\Main.c: 0 warnings, 1 error
+Target not created
+Build target 'LM3_uCOS-II'
+assembling Startup.s...
+compiling Target.c...
+compiling rit128x96x4.c...
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(336): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(396): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 2 warnings, 0 errors
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+compiling uCOS_II.C...
+compiling OS_CORE.C...
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:                 ^
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling Isr.c...
+compiling Main.c...
+..\..\Source\App\Src\Main.c(159): warning:  #177-D: variable "KeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:       uint8 KeySta = 0xFF;
+..\..\Source\App\Src\Main.c:             ^
+..\..\Source\App\Src\Main.c(160): warning:  #177-D: variable "oldKeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:    static uint8 oldKeySta  = 0xFF;
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(188): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c:        sprintf(buf,"Time: %02d-%02d-%02d", TargetInfo.stTime.uHour,TargetInfo.stTime.uMin,TargetInfo.stTime.uSec);
+..\..\Source\App\Src\Main.c:                ^
+..\..\Source\App\Src\Main.c(189): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c:                    RIT128x96x4StringDraw(buf, 30, 24, 15);
+..\..\Source\App\Src\Main.c:                                          ^
+..\..\Source\App\Src\Main.c(31): warning:  #177-D: variable "Task_UartStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_UartStk[TASK_UART_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(32): warning:  #177-D: variable "Task_KeyStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_KeyStk[TASK_KEY_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(34): warning:  #177-D: variable "Task_TempStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_TempStk[TASK_TEMP_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(157): warning:  #177-D: function "taskKey" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskKey (void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c(239): warning:  #177-D: function "taskTemp" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskTemp(void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c: ..\..\Source\App\Src\Main.c: 9 warnings, 0 errors
+linking...
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeTick multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRunning multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskIdleStk multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBPrioTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSUnMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSCtxSwCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExitY multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSLockNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyGrp multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIdleCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBFreeList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TaskIdle multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_Sched multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TCBInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCreate multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntEnter multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedLock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedUnlock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSStart multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSVersion multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskResume multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskSuspend multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeDly multiply defined (by os_time.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list image symbols.
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list the image map.
+..\..\OutPut\LM3_uCOS-II.axf: Finished: 2 information, 0 warning and 35 error messages.
+Target not created
+Build target 'LM3_uCOS-II'
+assembling Startup.s...
+compiling Target.c...
+compiling rit128x96x4.c...
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(336): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(396): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 2 warnings, 0 errors
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+compiling uCOS_II.C...
+compiling OS_CORE.C...
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:                 ^
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling Isr.c...
+compiling Main.c...
+..\..\Source\App\Src\Main.c(159): warning:  #177-D: variable "KeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:       uint8 KeySta = 0xFF;
+..\..\Source\App\Src\Main.c:             ^
+..\..\Source\App\Src\Main.c(160): warning:  #177-D: variable "oldKeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:    static uint8 oldKeySta  = 0xFF;
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(188): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c:        sprintf(buf,"Time: %02d-%02d-%02d", TargetInfo.stTime.uHour,TargetInfo.stTime.uMin,TargetInfo.stTime.uSec);
+..\..\Source\App\Src\Main.c:                ^
+..\..\Source\App\Src\Main.c(189): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c:                    RIT128x96x4StringDraw(buf, 30, 24, 15);
+..\..\Source\App\Src\Main.c:                                          ^
+..\..\Source\App\Src\Main.c(31): warning:  #177-D: variable "Task_UartStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_UartStk[TASK_UART_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(32): warning:  #177-D: variable "Task_KeyStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_KeyStk[TASK_KEY_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(34): warning:  #177-D: variable "Task_TempStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_TempStk[TASK_TEMP_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(157): warning:  #177-D: function "taskKey" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskKey (void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c(239): warning:  #177-D: function "taskTemp" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskTemp(void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c: ..\..\Source\App\Src\Main.c: 9 warnings, 0 errors
+linking...
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeTick multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRunning multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskIdleStk multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBPrioTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSUnMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSCtxSwCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExitY multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSLockNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyGrp multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIdleCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBFreeList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TaskIdle multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_Sched multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TCBInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCreate multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntEnter multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedLock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedUnlock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSStart multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSVersion multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskResume multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskSuspend multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeDly multiply defined (by os_time.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list image symbols.
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list the image map.
+..\..\OutPut\LM3_uCOS-II.axf: Finished: 2 information, 0 warning and 35 error messages.
+Target not created
+Build target 'LM3_uCOS-II'
+assembling Startup.s...
+compiling Target.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\Hal\Evm\Src\Target.c: 0 warnings, 1 error
+compiling rit128x96x4.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 0 warnings, 1 error
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c: 0 warnings, 1 error
+compiling uCOS_II.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\uCOS_II.C: 0 warnings, 1 error
+compiling OS_CORE.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_TIME.C: 0 warnings, 1 error
+compiling Isr.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\App\Src\Isr.c: 0 warnings, 1 error
+compiling Main.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\App\Src\Main.c: 0 warnings, 1 error
+Target not created
+Build target 'LM3_uCOS-II'
+assembling Startup.s...
+compiling Target.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\Hal\Evm\Src\Target.c: 0 warnings, 1 error
+compiling rit128x96x4.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 0 warnings, 1 error
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c: 0 warnings, 1 error
+compiling uCOS_II.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\uCOS_II.C: 0 warnings, 1 error
+compiling OS_CORE.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_TIME.C: 0 warnings, 1 error
+compiling Isr.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\App\Src\Isr.c: 0 warnings, 1 error
+compiling Main.c...
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\LM3SDriverLib\ethernet.h: ..\..\Source\App\Src\Main.c: 0 warnings, 1 error
+Target not created
+Build target 'LM3_uCOS-II'
+compiling Target.c...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\Hal\Evm\Src\Target.c: 0 warnings, 1 error
+compiling rit128x96x4.c...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 0 warnings, 1 error
+compiling os_cpu_c.c...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Ports\Src\os_cpu_c.c: 0 warnings, 1 error
+compiling uCOS_II.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\uCOS_II.C: 0 warnings, 1 error
+compiling OS_CORE.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 0 warnings, 1 error
+compiling OS_FLAG.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_FLAG.C: 0 warnings, 1 error
+compiling OS_MBOX.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MBOX.C: 0 warnings, 1 error
+compiling OS_MEM.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MEM.C: 0 warnings, 1 error
+compiling OS_MUTEX.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_MUTEX.C: 0 warnings, 1 error
+compiling OS_Q.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_Q.C: 0 warnings, 1 error
+compiling OS_SEM.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_SEM.C: 0 warnings, 1 error
+compiling OS_TASK.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_TASK.C: 0 warnings, 1 error
+compiling OS_TIME.C...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\uCOS-II\Source\Src\OS_TIME.C: 0 warnings, 1 error
+compiling Isr.c...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\App\Src\Isr.c: 0 warnings, 1 error
+compiling Main.c...
+..\..\Source\DriverLib\ethernet.h(151): error:  #5: cannot open source input file "driverlib/sysctl.h": No such file or directory
+..\..\Source\DriverLib\ethernet.h:   #include "driverlib/sysctl.h"
+..\..\Source\DriverLib\ethernet.h:                                ^
+..\..\Source\DriverLib\ethernet.h: ..\..\Source\App\Src\Main.c: 0 warnings, 1 error
+Target not created
+Build target 'LM3_uCOS-II'
+assembling Startup.s...
+compiling Target.c...
+compiling rit128x96x4.c...
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(336): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(396): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 2 warnings, 0 errors
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+compiling uCOS_II.C...
+compiling OS_CORE.C...
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:                 ^
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling Isr.c...
+compiling Main.c...
+..\..\Source\App\Src\Main.c(159): warning:  #177-D: variable "KeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:       uint8 KeySta = 0xFF;
+..\..\Source\App\Src\Main.c:             ^
+..\..\Source\App\Src\Main.c(160): warning:  #177-D: variable "oldKeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:    static uint8 oldKeySta  = 0xFF;
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(188): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c:        sprintf(buf,"Time: %02d-%02d-%02d", TargetInfo.stTime.uHour,TargetInfo.stTime.uMin,TargetInfo.stTime.uSec);
+..\..\Source\App\Src\Main.c:                ^
+..\..\Source\App\Src\Main.c(189): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c:                    RIT128x96x4StringDraw(buf, 30, 24, 15);
+..\..\Source\App\Src\Main.c:                                          ^
+..\..\Source\App\Src\Main.c(31): warning:  #177-D: variable "Task_UartStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_UartStk[TASK_UART_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(32): warning:  #177-D: variable "Task_KeyStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_KeyStk[TASK_KEY_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(34): warning:  #177-D: variable "Task_TempStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_TempStk[TASK_TEMP_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(157): warning:  #177-D: function "taskKey" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskKey (void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c(239): warning:  #177-D: function "taskTemp" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskTemp(void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c: ..\..\Source\App\Src\Main.c: 9 warnings, 0 errors
+linking...
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeTick multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRunning multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskIdleStk multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBPrioTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSUnMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSCtxSwCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExitY multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSLockNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyGrp multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIdleCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBFreeList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TaskIdle multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_Sched multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TCBInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCreate multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntEnter multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedLock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedUnlock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSStart multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSVersion multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskResume multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskSuspend multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeDly multiply defined (by os_time.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list image symbols.
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list the image map.
+..\..\OutPut\LM3_uCOS-II.axf: Finished: 2 information, 0 warning and 35 error messages.
+Target not created
+Build target 'LM3_uCOS-II'
+assembling Startup.s...
+compiling Target.c...
+compiling rit128x96x4.c...
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(336): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c(396): warning:  #223-D: function "SSIBusy" declared implicitly
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:           while(SSIBusy(SSI0_BASE))
+..\..\Source\Hal\Oled\Src\rit128x96x4.c:                 ^
+..\..\Source\Hal\Oled\Src\rit128x96x4.c: ..\..\Source\Hal\Oled\Src\rit128x96x4.c: 2 warnings, 0 errors
+assembling os_cpu_a.asm...
+compiling os_cpu_c.c...
+compiling uCOS_II.C...
+compiling OS_CORE.C...
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C(68): warning:  #177-D: function "OS_InitTaskStat" was declared but never referenced
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:   static  void  OS_InitTaskStat(void);
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C:                 ^
+..\..\Source\uCOS-II\Source\Src\OS_CORE.C: ..\..\Source\uCOS-II\Source\Src\OS_CORE.C: 1 warning, 0 errors
+compiling OS_FLAG.C...
+compiling OS_MBOX.C...
+compiling OS_MEM.C...
+compiling OS_MUTEX.C...
+compiling OS_Q.C...
+compiling OS_SEM.C...
+compiling OS_TASK.C...
+compiling OS_TIME.C...
+compiling Isr.c...
+compiling Main.c...
+..\..\Source\App\Src\Main.c(159): warning:  #177-D: variable "KeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:       uint8 KeySta = 0xFF;
+..\..\Source\App\Src\Main.c:             ^
+..\..\Source\App\Src\Main.c(160): warning:  #177-D: variable "oldKeySta" was declared but never referenced
+..\..\Source\App\Src\Main.c:    static uint8 oldKeySta  = 0xFF;
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(188): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "char *restrict"
+..\..\Source\App\Src\Main.c:        sprintf(buf,"Time: %02d-%02d-%02d", TargetInfo.stTime.uHour,TargetInfo.stTime.uMin,TargetInfo.stTime.uSec);
+..\..\Source\App\Src\Main.c:                ^
+..\..\Source\App\Src\Main.c(189): warning:  #167-D: argument of type "int8 *" is incompatible with parameter of type "const char *"
+..\..\Source\App\Src\Main.c:                    RIT128x96x4StringDraw(buf, 30, 24, 15);
+..\..\Source\App\Src\Main.c:                                          ^
+..\..\Source\App\Src\Main.c(31): warning:  #177-D: variable "Task_UartStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_UartStk[TASK_UART_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(32): warning:  #177-D: variable "Task_KeyStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_KeyStk[TASK_KEY_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(34): warning:  #177-D: variable "Task_TempStk" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static OS_STK Task_TempStk[TASK_TEMP_STK_SIZE];
+..\..\Source\App\Src\Main.c:                 ^
+..\..\Source\App\Src\Main.c(157): warning:  #177-D: function "taskKey" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskKey (void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c(239): warning:  #177-D: function "taskTemp" was declared but never referenced
+..\..\Source\App\Src\Main.c:   static void taskTemp(void *parg)
+..\..\Source\App\Src\Main.c:               ^
+..\..\Source\App\Src\Main.c: ..\..\Source\App\Src\Main.c: 9 warnings, 0 errors
+linking...
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeTick multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSPrioHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRunning multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBCur multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBHighRdy multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskIdleStk multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBPrioTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSUnMapTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSCtxSwCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntExitY multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSLockNesting multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyGrp multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSRdyTbl multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIdleCtr multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBFreeList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTCBList multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TaskIdle multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_Sched multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OS_TCBInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskCreate multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSInit multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSIntEnter multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedLock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSSchedUnlock multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSStart multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSVersion multiply defined (by os_core.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskResume multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTaskSuspend multiply defined (by os_task.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Error: L6200E: Symbol OSTimeDly multiply defined (by os_time.o and ucos_ii.o).
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list image symbols.
+..\..\OutPut\LM3_uCOS-II.axf: Not enough information to list the image map.
+..\..\OutPut\LM3_uCOS-II.axf: Finished: 2 information, 0 warning and 35 error messages.
+Target not created
