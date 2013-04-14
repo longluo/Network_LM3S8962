@@ -24,7 +24,7 @@ stCurPhysics TargetInfo;
 int ADC_EndFlag_3 = 0;
 
 /*********************************************************************************************************
-** Function name:           ledInit                                                                     **
+** Function name:           LedInit                                                                     **
 ** Descriptions:            Initialize the target board's leds,support up to 4 leds                     **     
 ** input parameters:        none                                                                        **
 ** output parameters:       none                                                                        **
@@ -33,14 +33,21 @@ int ADC_EndFlag_3 = 0;
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/          
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
-void  LedInit (void)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+void LedInit (void)
 {
     volatile unsigned long ulLoop;
+    
+    #if TARGET_LED_EN > 0
+     	SysCtlPeripheralEnable(LED_SYSCTL);
+        GPIODirModeSet(LED_GPIO_PORT, LED_PIN, GPIO_DIR_MODE_OUT);
+        GPIOPadConfigSet(LED_GPIO_PORT, LED_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+    #endif
+    
     #if TARGET_LED1_EN > 0
-        SysCtlPeripheralEnable(TAG_LED1_SYSCTL);
-        GPIODirModeSet(TAG_LED1_GPIO_PORT, TAG_LED1_PIN, GPIO_DIR_MODE_OUT);
-        GPIOPadConfigSet(TAG_LED1_GPIO_PORT, TAG_LED1_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+		SysCtlPeripheralEnable(LED1_SYSCTL);
+		GPIODirModeSet(LED1_GPIO_PORT, LED1_PIN, GPIO_DIR_MODE_OUT);
+		GPIOPadConfigSet(LED1_GPIO_PORT, LED1_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
     #endif
     
     #if TARGET_LED2_EN > 0
@@ -63,6 +70,7 @@ void  LedInit (void)
 }
 #endif
 
+
 /*********************************************************************************************************
 ** Function name:           ledOn                                                                       **
 ** Descriptions:            Switch on one or all of the LEDs                                            **     
@@ -74,14 +82,20 @@ void  LedInit (void)
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0) 
 void  LedOn (INT8U  ucLed)
 {
     switch (ucLed) 
     {
+		case 0:
+			#if TARGET_LED_EN > 0
+				GPIOPinWrite(LED_GPIO_PORT, LED_PIN, ~LED_PIN);
+			#endif
+		break;
+
         case 1: 
             #if TARGET_LED1_EN > 0
-                GPIOPinWrite(TAG_LED1_GPIO_PORT, TAG_LED1_PIN, ~TAG_LED1_PIN);
+				GPIOPinWrite(LED1_GPIO_PORT, LED1_PIN, ~LED1_PIN);
             #endif
             break;
       
@@ -102,10 +116,14 @@ void  LedOn (INT8U  ucLed)
                 GPIOPinWrite(LED4_GPIO_PORT, LED4_PIN, ~LED4_PIN);
             #endif
             break;
-
+	        	
         case 0xFF:
+	        #if TARGET_LED_EN > 0
+	        	GPIOPinWrite(LED_GPIO_PORT, LED_PIN, ~LED_PIN);
+			#endif
+        
             #if TARGET_LED1_EN > 0
-                GPIOPinWrite(TAG_LED1_GPIO_PORT, TAG_LED1_PIN, ~TAG_LED1_PIN);
+				GPIOPinWrite(LED1_GPIO_PORT, LED1_PIN, ~LED1_PIN);
             #endif
 
             #if TARGET_LED2_EN > 0
@@ -139,14 +157,20 @@ void  LedOn (INT8U  ucLed)
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
 void  LedOff (INT8U  ucLed)
 {
     switch (ucLed) 
     {
+        case 0:
+        	#if TARGET_LED_EN > 0
+        		GPIOPinWrite(LED_GPIO_PORT, LED_PIN, LED_PIN);
+        	#endif
+        	break;
+
         case 1: 
             #if TARGET_LED1_EN > 0
-                GPIOPinWrite(TAG_LED1_GPIO_PORT, TAG_LED1_PIN, TAG_LED1_PIN);
+      	        GPIOPinWrite(LED1_GPIO_PORT, LED1_PIN, LED1_PIN);
             #endif
             break;
       
@@ -169,8 +193,12 @@ void  LedOff (INT8U  ucLed)
             break;
 
         case 0xFF:
+	        #if TARGET_LED_EN > 0
+      	        GPIOPinWrite(LED_GPIO_PORT, LED_PIN, LED_PIN);
+	        #endif
+        
             #if TARGET_LED1_EN > 0
-                GPIOPinWrite(TAG_LED1_GPIO_PORT, TAG_LED1_PIN, TAG_LED1_PIN);
+      	        GPIOPinWrite(LED1_GPIO_PORT, LED1_PIN, LED1_PIN);
             #endif
 
             #if TARGET_LED2_EN > 0
@@ -192,6 +220,7 @@ void  LedOff (INT8U  ucLed)
 }
 #endif
 
+
 /*********************************************************************************************************
 ** Function name:           ledToggle                                                                   **
 ** Descriptions:            Toggle one or all of the LEDs                                               **     
@@ -203,22 +232,22 @@ void  LedOff (INT8U  ucLed)
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
 void  LedToggle (INT8U  ucLed)
 {
-    unsigned long      Pinval =0;
+    unsigned long PinVal =0;
 
     switch (ucLed) 
     {
+       	case 0:
+            #if TARGET_LED_EN > 0
+    	        GPIOPinWrite(LED_GPIO_PORT, LED_PIN, ~GPIOPinRead(LED_GPIO_PORT, LED_PIN));
+	        #endif
+            break;
+
         case 1: 
             #if TARGET_LED1_EN > 0
-                Pinval = GPIOPinRead(TAG_LED1_GPIO_PORT, TAG_LED1_PIN);
-                if(Pinval)
-                GPIO_PORTF_DATA_R &= ~(0x01);
-                //GPIOPinWrite(TAG_LED1_GPIO_PORT, TAG_LED1_PIN,0);// ~GPIOPinRead(TAG_LED1_GPIO_PORT, TAG_LED1_PIN));
-                else
-                 GPIO_PORTF_DATA_R |= 0x01;
-                //GPIOPinWrite(TAG_LED1_GPIO_PORT, TAG_LED1_PIN,1);
+				GPIOPinWrite(LED1_GPIO_PORT, LED1_PIN, ~GPIOPinRead(LED1_GPIO_PORT, LED1_PIN));
             #endif
             break;
       
@@ -239,10 +268,14 @@ void  LedToggle (INT8U  ucLed)
                 GPIOPinWrite(LED4_GPIO_PORT, LED4_PIN, ~GPIOPinRead(LED4_GPIO_PORT, LED4_PIN));
             #endif
             break;
-
+            
         case 0xFF:
+	        #if TARGET_LED_EN > 0
+    	        GPIOPinWrite(LED_GPIO_PORT, LED_PIN, ~GPIOPinRead(LED_GPIO_PORT, LED_PIN));
+	        #endif
+        
             #if TARGET_LED1_EN > 0
-                GPIOPinWrite(TAG_LED1_GPIO_PORT, TAG_LED1_PIN, ~GPIOPinRead(TAG_LED1_GPIO_PORT, TAG_LED1_PIN));
+	  	        GPIOPinWrite(LED1_GPIO_PORT, LED1_PIN, ~GPIOPinRead(LED1_GPIO_PORT, LED1_PIN));
             #endif
 
             #if TARGET_LED2_EN > 0
@@ -266,7 +299,7 @@ void  LedToggle (INT8U  ucLed)
 
 
 /*********************************************************************************************************
-** Function name:           buzInit                                                                     **
+** Function name:           BuzInit                                                                     **
 ** Descriptions:            Initialize the target board's buzzer                                        **     
 ** input parameters:        None                                                                        **
 ** output parameters:       none                                                                        **
@@ -276,18 +309,18 @@ void  LedToggle (INT8U  ucLed)
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-void  buzInit (void)
-{
-    SysCtlPeripheralEnable(BUZ_SYSCTL);
+void BuzInit (void)
+{	
+	SysCtlPeripheralEnable(BUZ_SYSCTL);
     GPIODirModeSet(BUZ_GPIO_PORT, BUZ_PIN, GPIO_DIR_MODE_OUT);
-    GPIOPadConfigSet(BUZ_GPIO_PORT, BUZ_PIN,GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
-    buzOff();
+    GPIOPadConfigSet(BUZ_GPIO_PORT, BUZ_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+    BuzOff();
 }
 #endif
 
 
 /*********************************************************************************************************
-** Function name:           buzOn                                                                       **
+** Function name:           BuzOn                                                                       **
 ** Descriptions:            Switch on the buzzer                                                        **     
 ** input parameters:        None                                                                        **
 ** output parameters:       none                                                                        **
@@ -297,7 +330,7 @@ void  buzInit (void)
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-void  buzOn (void)
+void  BuzOn (void)
 {
     GPIOPinWrite(BUZ_GPIO_PORT, BUZ_PIN, ~BUZ_PIN);
 }
@@ -305,27 +338,24 @@ void  buzOn (void)
 
 
 /*********************************************************************************************************
-** Function name:           buzOff
-** Descriptions:            Switch off the buzzer 关闭蜂鸣器
-** Input parameters:        None 无
-** Output parameters:       None 无
-** Returned value:          None 无
-** Created by:              Steven Zhou 周绍刚
-** Created Date:            2007.01.18
-**--------------------------------------------------------------------------------------------------------
-** Modified by:             Ni Likao 倪力考
-** Modified date:           2007.11.02
-**--------------------------------------------------------------------------------------------------------
+** Function name:           BuzOff
+** Descriptions:            Switch off the buzzer 
+** Input parameters:        None 
+** Output parameters:       None 
+** Returned value:          None 
+** Created by:              long.luo
+** Created Date:            2013.04.12
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-    void  buzOff (void)
-    {
-        GPIOPinWrite(BUZ_GPIO_PORT, BUZ_PIN, BUZ_PIN);
-    }
+void  BuzOff (void)
+{
+    GPIOPinWrite(BUZ_GPIO_PORT, BUZ_PIN, BUZ_PIN);
+}
 #endif
 
+
 /*********************************************************************************************************
-** Function name:           buzToggle                                                                   **
+** Function name:           BuzToggle                                                                   **
 ** Descriptions:            Toggle the buzzer                                                           **     
 ** input parameters:        None                                                                        **
 ** output parameters:       none                                                                        **
@@ -335,9 +365,139 @@ void  buzOn (void)
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-void buzToggle (void)    
+void BuzToggle (void)    
 {
     GPIOPinWrite(BUZ_GPIO_PORT, BUZ_PIN, ~GPIOPinRead(BUZ_GPIO_PORT, BUZ_PIN));
+}
+#endif
+
+
+/*********************************************************************************************************
+** Function name:           BuzFrequency                                                                **
+** Descriptions:            Set the buzzer's Frequency                                                  **     
+** input parameters:        None                                                                        **
+** output parameters:       none                                                                        **
+** Returned value:          none                                                                        **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            12-04-2013                                                                  **
+*********************************************************************************************************/
+#if TARGET_BUZ_EN > 0
+void BuzFrequency (INT32U ulFrequency)
+{	
+	//TargetInfo.stPWM.ulFrequency = ulFrequency;
+	SetPWMFrequency(ulFrequency);
+}
+#endif
+
+
+/*********************************************************************************************************
+** Function name:           PWMInit                                                                     **
+** Descriptions:            Initialize the target board's PMW                                           **     
+** input parameters:        None                                                                        **
+** output parameters:       none                                                                        **
+** Returned value:          noe                                                                         **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            14-04-2013                                                                  **
+*********************************************************************************************************/
+#if TARGET_PWM_EN > 0
+void PWMInit(void)
+{	
+    // Enable the PWM generator.
+    SysCtlPeripheralEnable(PWM_SYSCTL);
+    
+    // Configure the PWM generator for count down mode with immediate updates
+    // to the parameters.
+    PWMGenConfigure(PWM_BASE, PWM_GEN_0,
+                    PWM_GEN_MODE_DOWN | PWM_GEN_MODE_NO_SYNC);
+
+	// Divide the PWM clock by 4.
+    SysCtlPWMClockSet(SYSCTL_PWMDIV_4); 
+
+	// Get the PWM clock.
+	TargetInfo.stPWM.ulPWMClock = SysCtlClockGet() / 4;
+
+	// Start the timers in generator 0.
+    PWMGenEnable(PWM_BASE, PWM_GEN_0);
+}
+#endif
+
+
+/************************************************************************************
+** Function: SetPWMState()
+** Routine Description: - 
+**      Enable or disable the PWM1 output.  
+** Input parameters: - 
+**    NONE 
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 23:12:17,27/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_PWM_EN > 0
+void SetPWMState(tBoolean bOn)
+{
+    // Enable or disable the PWM1 output. 
+	PWMOutputState(PWM_BASE, PWM_OUT_1_BIT, bOn); 
+}
+#endif
+
+
+/************************************************************************************
+** Function: SetPWMFrequency()
+** Routine Description: - 
+**     Set PWM Frequency 
+** Input parameters: unsigned long Frequency
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 21:13:03,21/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_PWM_EN > 0
+void SetPWMFrequency(INT32U ulFrequency)
+{
+	// Set the global frequency
+	TargetInfo.stPWM.ulFrequency = ulFrequency;
+
+	// Set the period.
+	PWMGenPeriodSet(PWM_BASE, PWM_GEN_0, TargetInfo.stPWM.ulPWMClock / TargetInfo.stPWM.ulFrequency);
+
+	// Set the pulse width of PWM1
+	PWMPulseWidthSet(PWM_BASE, PWM_OUT_1, 
+				((TargetInfo.stPWM.ulPWMClock * TargetInfo.stPWM.ulDutyCycle) / 100) / TargetInfo.stPWM.ulFrequency);	
+}
+#endif
+
+
+/************************************************************************************
+** Function: SetPWMDutyCycle()
+** Routine Description: - 
+**     Set PWM Duty Cycle 
+** Input parameters: unsigned long ulDutyCycle
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 21:52:28,21/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_PWM_EN > 0
+void SetPWMDutyCycle(INT32U ulDutyCycle)
+{
+	// Set the global duty cycle
+	TargetInfo.stPWM.ulDutyCycle = ulDutyCycle;
+
+	// Set the period.
+	PWMGenPeriodSet(PWM_BASE, PWM_GEN_0, TargetInfo.stPWM.ulPWMClock / TargetInfo.stPWM.ulFrequency);
+
+	// Set the pulse width of PWM1
+	PWMPulseWidthSet(PWM_BASE, PWM_OUT_1, 
+				((TargetInfo.stPWM.ulPWMClock * TargetInfo.stPWM.ulDutyCycle) / 100) / TargetInfo.stPWM.ulFrequency);
 }
 #endif
 
@@ -354,6 +514,7 @@ void buzToggle (void)
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if (TARGET_KEY1_EN > 0) ||  (TARGET_KEY2_EN > 0) || (TARGET_KEY3_EN > 0) || (TARGET_KEY4_EN > 0)
+   || (TARGET_KEY_SELECT_EN > 0) || (TARGET_KEY_UP_EN > 0) || (TARGET_KEY_DOWN_EN > 0) || (TARGET_KEY_LEFT_EN > 0) ||  (TARGET_KEY_RIGHT_EN > 0)
 void keyInit (void)    
 {
     #if TARGET_KEY1_EN > 0
@@ -379,8 +540,39 @@ void keyInit (void)
         GPIODirModeSet(KEY4_GPIO_PORT, KEY4_PIN, GPIO_DIR_MODE_IN);
         GPIOPadConfigSet(KEY4_GPIO_PORT, KEY4_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
     #endif    
+    
+	#if TARGET_KEY_SELECT_EN > 0
+		SysCtlPeripheralEnable(KEY_SELECT_SYSCTL);
+        GPIODirModeSet(KEY_SELECT_GPIO_PORT, KEY_SELECT_PIN, GPIO_DIR_MODE_IN);
+        GPIOPadConfigSet(KEY_SELECT_GPIO_PORT, KEY_SELECT_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+    #endif	
+    
+	#if TARGET_KEY_UP_EN > 0
+		SysCtlPeripheralEnable(KEY_UP_SYSCTL);
+        GPIODirModeSet(KEY_UP_GPIO_PORT, KEY_UP_PIN, GPIO_DIR_MODE_IN);
+        GPIOPadConfigSet(KEY_UP_GPIO_PORT, KEY_UP_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+    #endif
+    
+    #if TARGET_KEY_DOWN_EN > 0
+		SysCtlPeripheralEnable(KEY_DOWN_SYSCTL);
+        GPIODirModeSet(KEY_DOWN_GPIO_PORT, KEY_DOWN_PIN, GPIO_DIR_MODE_IN);
+        GPIOPadConfigSet(KEY_DOWN_GPIO_PORT, KEY_DOWN_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+    #endif
+    
+    #if TARGET_KEY_LEFT_EN > 0
+		SysCtlPeripheralEnable(KEY_LEFT_SYSCTL);
+        GPIODirModeSet(KEY_LEFT_GPIO_PORT, KEY_LEFT_PIN, GPIO_DIR_MODE_IN);
+        GPIOPadConfigSet(KEY_LEFT_GPIO_PORT, KEY_LEFT_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+    #endif
+    
+    #if TARGET_KEY_RIGHT_EN > 0
+		SysCtlPeripheralEnable(KEY_RIGHT_SYSCTL);
+        GPIODirModeSet(KEY_RIGHT_GPIO_PORT, KEY_RIGHT_PIN, GPIO_DIR_MODE_IN);
+        GPIOPadConfigSet(KEY_RIGHT_GPIO_PORT, KEY_RIGHT_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD);
+    #endif        
 }
 #endif
+
 
 /*********************************************************************************************************
 ** Function name:           keyRead                                                                     **
@@ -393,6 +585,7 @@ void keyInit (void)
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if (TARGET_KEY1_EN > 0) ||  (TARGET_KEY2_EN > 0) || (TARGET_KEY3_EN > 0) || (TARGET_KEY4_EN > 0)
+   || (TARGET_KEY_SELECT_EN > 0) || (TARGET_KEY_UP_EN > 0) || (TARGET_KEY_DOWN_EN > 0) || (TARGET_KEY_LEFT_EN > 0) ||  (TARGET_KEY_RIGHT_EN > 0)
 INT8U keyRead (void)
 {
     INT8U ucTemp;
@@ -420,15 +613,113 @@ INT8U keyRead (void)
     #endif
 
     #if TARGET_KEY4_EN > 0
-        if (!GPIOPinRead(KEY4_GPIO_PORT, KEY4_PIN)) 
+		if (!GPIOPinRead(KEY4_GPIO_PORT, KEY4_PIN)) 
+		{
+		    ucTemp &= 0xF7; 
+		}
+	#endif  
+        
+    #if TARGET_KEY_SELECT_EN > 0
+        if (!GPIOPinRead(KEY_SELECT_GPIO_PORT, KEY_SELECT_PIN)) 
+    	{
+			//ucTemp &= 0xF7; 
+		}
+        #endif
+     
+    #if TARGET_KEY_UP_EN > 0
+        if (!GPIOPinRead(KEY_UP_GPIO_PORT, KEY_UP_PIN)) 
         {
             ucTemp &= 0xF7; 
         }
-    #endif     
+    #endif
 
-        return(ucTemp);
+    #if TARGET_KEY_DOWN_EN > 0
+        if (!GPIOPinRead(KEY_DOWN_GPIO_PORT, KEY_DOWN_PIN)) 
+        {
+            ucTemp &= 0xF7; 
+        }
+    #endif
+    
+     #if TARGET_KEY_LEFT_EN > 0
+        if (!GPIOPinRead(KEY_LEFT_GPIO_PORT, KEY_LEFT_PIN)) 
+        {
+            ucTemp &= 0xF7; 
+        }
+    #endif
+    
+    #if TARGET_KEY_RIGHT_EN > 0
+        if (!GPIOPinRead(KEY_RIGHT_GPIO_PORT, KEY_RIGHT_PIN)) 
+        {
+            ucTemp &= 0xF7; 
+        }
+    #endif
+    
+	return(ucTemp);
 }
 #endif
+
+
+/************************************************************************************
+** Function: DispInit
+** Routine Description: - 
+**     Init the display 
+** Input parameters: 
+** Output parameters: 
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 22:07:09,21/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_DISP_EN > 0
+void DispInit(INT32U ulFrequency)
+{
+	RIT128x96x4Init(ulFrequency);
+}
+#endif
+
+
+/************************************************************************************
+** Function: DispEnable()
+** Routine Description: - 
+**     display 
+** Input parameters: - 
+** 		ulFrequency
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 21:46:21,22/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_DISP_EN > 0
+void DispEnable(INT32U ulFrequency)
+{
+    RIT128x96x4Enable(ulFrequency);
+}
+#endif
+
+
+/************************************************************************************
+** Function: DispDisable()
+** Routine Description: - 
+**     1.0 
+** Input parameters: - 
+** 		NONE
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 21:48:27,22/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_DISP_EN > 0
+void DispDisable(void)
+{
+	RIT128x96x4Disable();
+}
+#endif
+
 
 /*********************************************************************************************************
 ** Function name:           timer0AInit                                                                 **
@@ -453,6 +744,7 @@ void timer0AInit (INT32U  ulTick, INT8U  ucPrio)
     TimerEnable(TIMER0_BASE, TIMER_A);        
 }
 #endif
+
 
 /*********************************************************************************************************
 ** Function name:           timer0AISR                                                                  **
@@ -496,6 +788,7 @@ void timer0AISR (void)
 }
 #endif
 
+
 /*********************************************************************************************************
 ** Function name:           InitTick                                                                    **
 ** Descriptions:            Initialize uC/OS-II's tick source(system timer)，                           **     
@@ -506,12 +799,13 @@ void timer0AISR (void)
 ** Created by:              long.luo                                                                    **
 ** Created Date:            10-04-2013                                                                  **
 *********************************************************************************************************/ 
-static  void  InitTick (void)
+static void InitTick(void)
 {
     SysTickPeriodSet((INT32U)(SysCtlClockGet() / OS_TICKS_PER_SEC) -1 );
     SysTickEnable();
     SysTickIntEnable();
 }
+
 
 /*********************************************************************************************************
 ** Function name:           tickISRHandler                                                              **
@@ -538,24 +832,28 @@ void  tickISRHandler (void)
     OSIntExit();                                 
 }
 
+
 /*********************************************************************************************************
-** Function name:           InitADC                                                                  **
-** Descriptions:            Initialize the ADC board                                                 **     
+** Function name:           InvertTemperature                                                           **
+** Descriptions:            Invert the temperature                                                      **     
 ** input parameters:        none                                                                        **
 ** output parameters:       none                                                                        **
 ** Returned value:          noe                                                                         **
 ==========================================================================================================
 ** Created by:              long.luo                                                                    **
-** Created Date:            10-04-2013                                                                  **
+** Created Date:            12-04-2013                                                                  **
 *********************************************************************************************************/ 
-unsigned long InvertTmperatur(unsigned long ulValue)
+#if TARGET_ADC_EN > 0
+INT32U InvertTemperature(INT32U ulValue)
 {
-    unsigned long ulTmp;
+    INT32U ulTemp;
     //char cBuf[40];
-    ulTmp = 151040UL -225 * ulValue;
+    ulTemp = 151040UL - 225 * ulValue;
     
-    return ulTmp;
+    return ulTemp;
 }
+#endif
+
 
 /*********************************************************************************************************
 ** Function name:           InitADC                                                                  **
@@ -567,6 +865,7 @@ unsigned long InvertTmperatur(unsigned long ulValue)
 ** Created by:              long.luo                                                                    **
 ** Created Date:            10-04-2013                                                                  **
 *********************************************************************************************************/ 
+#if TARGET_ADC_EN > 0
 void InitADC(void)
 {
     SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC);
@@ -582,9 +881,11 @@ void InitADC(void)
 
     ADCSequenceEnable(ADC_BASE,3);
 }
+#endif
+
 
 /*********************************************************************************************************
-** Function name:           InitTarget                                                                  **
+** Function name:           ADCSample                                                                   **
 ** Descriptions:            Initialize the target board                                                 **     
 ** input parameters:        none                                                                        **
 ** output parameters:       none                                                                        **
@@ -593,9 +894,10 @@ void InitADC(void)
 ** Created by:              long.luo                                                                    **
 ** Created Date:            10-04-2013                                                                  **
 *********************************************************************************************************/ 
-unsigned long ADCSample(void)
+#if TARGET_ADC_EN > 0
+INT32U ADCSample(void)
 {
-    unsigned long ulValue;
+    INT32U ulValue = 0;
 
     ADCProcessorTrigger(ADC_BASE,3);
     while(!ADC_EndFlag_3);
@@ -605,9 +907,11 @@ unsigned long ADCSample(void)
     
     return (ulValue);
 }
+#endif
+
 
 /*****************************************************************************************
-* Function Name   : ADCIntHandler                                                        *
+* Function Name   : ADC3IntHandler                                                       *
 * Description     :                                                                      *
 * Input Argument  :                                                                      *
 * Output          :                                                                      *
@@ -616,6 +920,7 @@ unsigned long ADCSample(void)
 ** Created by:              long.luo                                                    **
 ** Created Date:            10-04-2013                                                  **
 *****************************************************************************************/ 
+#if TARGET_ADC_EN > 0
 void ADC3IntHandler(void)
 {
     unsigned long ulStatus;
@@ -627,8 +932,10 @@ void ADC3IntHandler(void)
     {
         ADC_EndFlag_3 = true;
     }         
-
 }
+#endif
+
+
 /*********************************************************************************************************
 ** Function name:           InitTarget                                                                  **
 ** Descriptions:            Initialize the target board                                                 **     
@@ -666,6 +973,7 @@ void  InitTarget (void)
 
     
     LedInit();
+    BuzInit();
     InitADC();
     //keyInit();     
 }
@@ -674,3 +982,4 @@ void  InitTarget (void)
 /*********************************************************************************************************
   END FILE 
 *********************************************************************************************************/
+

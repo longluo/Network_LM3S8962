@@ -10,9 +10,9 @@
 ** Description:             Header file of the target board                                             **
 **                                                                                                      **
 **--------------------------------------------------------------------------------------------------------
-** Created By:              long.luo                                                                **
+** Created By:              long.luo                                                                    **
 ** Created date:            10-04-2013                                                                  **
-** Version:                 1.0                                                                         **
+** Version:                 1.1                                                                         **
 ** Descriptions:            The original version                                                        **
 **                                                                                                      **
 *********************************************************************************************************/
@@ -38,24 +38,51 @@ extern "C" {
 /*********************************************************************************************************
   Setting of the target board's API function 
 *********************************************************************************************************/
-#define  TARGET_LED1_EN     1                                           /*  1:Enable LED1               */     
+#define  TARGET_LED_EN		1											/*  1:Enable the LED            */
+
+#define  TARGET_LED1_EN     0                                           /*  1:Enable LED1               */     
 #define  TARGET_LED2_EN     0                                           /*  1:Enable LED2               */
 #define  TARGET_LED3_EN     0                                           /*  1:Enable LED3               */
 #define  TARGET_LED4_EN     0                                           /*  1:Enable LED4               */
 
 #define  TARGET_BUZ_EN      1                                           /*  1:Enable the buzzer         */
 
-#define  TARGET_KEY1_EN     1                                           /*  1:Enable Key1               */
-#define  TARGET_KEY2_EN     1                                           /*  1:Enable Key2               */
-#define  TARGET_KEY3_EN     1                                           /*  1:Enable Key3               */
-#define  TARGET_KEY4_EN     1                                           /*  1:Enable Key4               */
+#define  TARGET_KEY1_EN  	0  				                            /*  1:Enable Key1  使能Key1     */
+#define  TARGET_KEY2_EN   	0  					                        /*  1:Enable Key2  使能Key2     */
+#define  TARGET_KEY3_EN   	0  					                        /*  1:Enable Key3  使能Key3     */
+#define  TARGET_KEY4_EN   	0  					                        /*  1:Enable Key4  使能Key4     */
 
 #define  TARGET_TMR0A_EN    0                                           /*  1：Eanble the Timer0A API 
                                                                             functions                   */
+                                                                           
+#define  TARGET_KEY_SELECT_EN	0
+
+#define  TARGET_KEY_UP_EN		0
+#define  TARGET_KEY_DOWN_EN		0
+#define  TARGET_KEY_LEFT_EN		0	
+#define  TARGET_KEY_RIGHT_EN	0
+
+#define  TARGET_PWM_EN			1
+//#define  TARGET_PWM1_EN			1
+//#define  TARGET_PWM2_EN			1
+
+#define	 TARGET_UART_EN			1
+
+#define	 TARGET_DISP_EN			1
+
+#define  TARGET_ADC_EN			1
+
+
+#if TARGET_LED_EN > 0
+#define LED_SYSCTL		SYSCTL_PERIPH_GPIOF								/*  System control of LED      */
+#define LED_GPIO_PORT  	GPIO_PORTF_BASE									/*  IO port of LED             */
+#define LED_PIN       	GPIO_PIN_0										/*  Pin number of LED          */
+#endif
+                                                                         
 #if TARGET_LED1_EN > 0
-#define TAG_LED1_SYSCTL      SYSCTL_PERIPH_GPIOF                        /*  System control of LED1      */
-#define TAG_LED1_GPIO_PORT   GPIO_PORTF_BASE                            /*  IO port of LED1             */  
-#define TAG_LED1_PIN         GPIO_PIN_0                                 /*  Pin number of LED1          */
+#define LED1_SYSCTL  	SYSCTL_PERIPH_GPIOA	                            /*  System control of LED1      */
+#define LED1_GPIO_PORT  GPIO_PORTA_BASE     	                        /*  IO port of LED1             */  
+#define LED1_PIN        GPIO_PIN_0				                        /*  Pin number of LED1          */
 #endif
 
 #if TARGET_LED2_EN > 0
@@ -83,28 +110,71 @@ extern "C" {
 #endif
 
 #if TARGET_KEY1_EN > 0 
-#define KEY1_SYSCTL     SYSCTL_PERIPH_GPIOE                             /*  System control of Key1      */ 
-#define KEY1_GPIO_PORT  GPIO_PORTE_BASE                                 /*  IO port of Key1             */
+#define KEY1_SYSCTL    	SYSCTL_PERIPH_GPIOA	                            /*  System control of Key1      */ 
+#define KEY1_GPIO_PORT  GPIO_PORTA_BASE     	                        /*  IO port of Key1             */
 #define KEY1_PIN        GPIO_PIN_0                                      /*  Pin number of Key1          */
 #endif
 
 #if TARGET_KEY2_EN > 0  
-#define KEY2_SYSCTL     SYSCTL_PERIPH_GPIOE                             /*  System control of Key2      */
-#define KEY2_GPIO_PORT  GPIO_PORTE_BASE                                 /*  IO port of Key2             */
-#define KEY2_PIN        GPIO_PIN_1                                      /*  Pin number of Key2          */
+#define KEY2_SYSCTL  	SYSCTL_PERIPH_GPIOA 	                        /*  System control of Key2      */
+#define KEY2_GPIO_PORT  GPIO_PORTA_BASE     	                        /*  IO port of Key2             */
+#define KEY2_PIN        GPIO_PIN_0          	                        /*  Pin number of Key2          */
 #endif
 
 #if TARGET_KEY3_EN > 0
-#define KEY3_SYSCTL     SYSCTL_PERIPH_GPIOE                             /*  System control of Key3      */
-#define KEY3_GPIO_PORT  GPIO_PORTE_BASE                                 /*  IO port of Key3             */
-#define KEY3_PIN        GPIO_PIN_2                                      /*  Pin number of Key3          */
+#define KEY3_SYSCTL  	SYSCTL_PERIPH_GPIOA 	                        /*  System control of Key3      */
+#define KEY3_GPIO_PORT  GPIO_PORTA_BASE     	                        /*  IO port of Key3             */
+#define KEY3_PIN       	GPIO_PIN_0          	                        /*  Pin number of Key3          */
 #endif
 
 #if TARGET_KEY4_EN > 0
-#define KEY4_SYSCTL     SYSCTL_PERIPH_GPIOE                             /*  System control of Key4      */
-#define KEY4_GPIO_PORT  GPIO_PORTE_BASE                                 /*  IO port of Key4             */
-#define KEY4_PIN        GPIO_PIN_3                                      /*  Pin number of Key4          */
+#define KEY4_SYSCTL 	SYSCTL_PERIPH_GPIOA		                        /*  System control of Key4      */
+#define KEY4_GPIO_PORT  GPIO_PORTA_BASE     	                        /*  IO port of Key4             */
+#define KEY4_PIN        GPIO_PIN_0          	                        /*  Pin number of Key4          */
 #endif
+
+#ifdef TARGET_KEY_SELECT_EN > 0
+#define KEY_SELECT_SYSCTL		SYSCTL_PERIPH_GPIOF						/*  System control of Select Key */
+#define KEY_SELECT_GPIO_PORT	GPIO_PORTF_BASE							/*  IO port of Select Key        */
+#define KEY_SELECT_PIN			GPIO_PIN_1								/*  Pin number of Select Key     */
+#endif
+
+#ifdef TARGET_KEY_UP_EN > 0
+#define KEY_UP_SYSCTL 			SYSCTL_PERIPH_GPIOE			/*  System control of Key      */
+#define KEY_UP_GPIO_PORT  		GPIO_PORTE_BASE     	    /*  IO port of Key             */
+#define KEY_UP_PIN        		GPIO_PIN_0          	    /*  Pin number of Key         */
+#endif
+
+#ifdef TARGET_KEY_DOWN_EN > 0
+#define KEY_DOWN_SYSCTL 		SYSCTL_PERIPH_GPIOE			/*  System control of Key      */
+#define KEY_DOWN_GPIO_PORT  	GPIO_PORTE_BASE     	    /*  IO port of Key             */
+#define KEY_DOWN_PIN        	GPIO_PIN_1          	    /*  Pin number of Key         */
+#endif
+
+#ifdef TARGET_KEY_LEFT_EN > 0
+#define KEY_LEFT_SYSCTL 		SYSCTL_PERIPH_GPIOE			/*  System control of Key      */
+#define KEY_LEFT_GPIO_PORT  	GPIO_PORTE_BASE     	    /*  IO port of Key             */
+#define KEY_LEFT_PIN        	GPIO_PIN_2         	    	/*  Pin number of Key         */
+#endif
+
+#ifdef TARGET_KEY_RIGHT_EN > 0
+#define KEY_RIGHT_SYSCTL 		SYSCTL_PERIPH_GPIOE			/*  System control of Key      */
+#define KEY_RIGHT_GPIO_PORT  	GPIO_PORTE_BASE     	    /*  IO port of Key             */
+#define KEY_RIGHT_PIN        	GPIO_PIN_3          	    /*  Pin number of Key         */
+#endif
+
+#if TARGET_PWM_EN > 0
+#define PWM_SYSCTL				SYSCTL_PERIPH_PWM
+#define PWM_GPIO_PORT		
+#define PWM_PIN
+#endif
+
+#if TARGET_UART_EN > 0
+#define UART_SYSCTL				SYSCTL_PERIPH_UART0
+#define UART_GPIO_PORT
+#define UART_PIN
+#endif
+
 
 /*********************************************************************************************************
   End of user's settings 
@@ -126,6 +196,7 @@ extern "C" {
 *********************************************************************************************************/
 extern void IntDisAll (void);
 
+
 /*********************************************************************************************************
 ** Function name:           LedInit                                                                     **
 ** Descriptions:            Initialize the target board's leds,support up to 4 leds                     **     
@@ -136,7 +207,7 @@ extern void IntDisAll (void);
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN >0 ) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN >0 ) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)  
     extern void LedInit (void);
 #endif
 
@@ -152,9 +223,10 @@ extern void IntDisAll (void);
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0) 
     extern void LedOn (INT8U  ucLed);
 #endif
+
 
 /*********************************************************************************************************
 ** Function name:          LedOff                                                                       **
@@ -167,9 +239,10 @@ extern void IntDisAll (void);
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
     extern void LedOff (INT8U  ucLed);
 #endif
+
 
 /*********************************************************************************************************
 ** Function name:           LedToggle                                                                   **
@@ -182,12 +255,13 @@ extern void IntDisAll (void);
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-#if (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
+#if (TARGET_LED_EN > 0) || (TARGET_LED1_EN > 0) || (TARGET_LED2_EN > 0) || (TARGET_LED3_EN > 0) || (TARGET_LED4_EN > 0)
     extern void LedToggle (INT8U  ucLed);
 #endif
 
+
 /*********************************************************************************************************
-** Function name:           buzInit                                                                     **
+** Function name:           BuzInit                                                                     **
 ** Descriptions:            Initialize the target board's buzzer                                        **     
 ** input parameters:        None                                                                        **
 ** output parameters:       none                                                                        **
@@ -197,11 +271,12 @@ extern void IntDisAll (void);
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-    extern void buzInit (void);
+    extern void BuzInit (void);
 #endif
 
+
 /*********************************************************************************************************
-** Function name:           buzOn                                                                       **
+** Function name:           BuzOn                                                                       **
 ** Descriptions:            Switch on the buzzer                                                        **     
 ** input parameters:        None                                                                        **
 ** output parameters:       none                                                                        **
@@ -211,11 +286,12 @@ extern void IntDisAll (void);
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-    extern void buzOn (void);
+    extern void BuzOn (void);
 #endif
 
+
 /*********************************************************************************************************
-** Function name:           buzOff                                                                      **
+** Function name:           BuzOff                                                                      **
 ** Descriptions:            Switch off the buzzer                                                       **     
 ** input parameters:        None                                                                        **
 ** output parameters:       none                                                                        **
@@ -225,11 +301,12 @@ extern void IntDisAll (void);
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-    extern void buzOff (void);
+    extern void BuzOff (void);
 #endif
 
+
 /*********************************************************************************************************
-** Function name:           buzToggle                                                                   **
+** Function name:           BuzToggle                                                                   **
 ** Descriptions:            Toggle the buzzer                                                           **     
 ** input parameters:        None                                                                        **
 ** output parameters:       none                                                                        **
@@ -239,8 +316,93 @@ extern void IntDisAll (void);
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if TARGET_BUZ_EN > 0
-    extern void buzToggle (void);    
+    extern void BuzToggle (void);    
 #endif
+
+
+/*********************************************************************************************************
+** Function name:           BuzFrequency                                                                **
+** Descriptions:            Set the buzzer's frequency                                                  **     
+** input parameters:        ulFrequency                                                                 **
+** output parameters:       none                                                                        **
+** Returned value:          none                                                                        **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            12-04-2013                                                                  **
+*********************************************************************************************************/
+#if TARGET_BUZ_EN > 0
+    extern void BuzFrequency (INT32U ulFrequency);    
+#endif
+
+
+/*********************************************************************************************************
+** Function name:           PWMInit                                                                     **
+** Descriptions:            Initialize the target PWM                                                   **     
+** input parameters:        None                                                                        **
+** output parameters:       none                                                                        **
+** Returned value:          noe                                                                         **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            11-04-2013                                                                  **
+*********************************************************************************************************/
+#if TARGET_PWM_EN > 0
+    extern void PWMInit (void);
+#endif
+
+
+/************************************************************************************
+** Function: setPWMState()
+** Routine Description: - 
+**     Turn PWM on/off  
+** Input parameters: - 
+**    NONE 
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 23:09:42,27/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_PWM_EN > 0
+	extern void SetPWMState(tBoolean bOn);
+#endif
+
+
+/************************************************************************************
+** Function: SetPWMFrequency()
+** Routine Description: - 
+**     set the PWM frequency 
+** Input parameters: - 
+** 		ulFrequency
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 23:01:20,22/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_PWM_EN > 0
+	extern void SetPWMFrequency(INT32U ulFrequency);
+#endif
+
+
+/************************************************************************************
+** Function: setPWMDutyCycle()
+** Routine Description: - 
+**     the buzzer voice 
+** Input parameters: - 
+** 
+** Output parameters: NONE
+** Returned Value: NONE
+** Remarks:
+** 
+** Date created: 23:01:58,22/05/2012
+** Author: Long.Luo
+************************************************************************************/
+#if TARGET_PWM_EN > 0
+	extern void SetPWMDutyCycle(INT32U ulDutyCycle);
+#endif
+
 
 /*********************************************************************************************************
 ** Function name:           keyInit                                                                     **
@@ -254,8 +416,10 @@ extern void IntDisAll (void);
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if (TARGET_KEY1_EN > 0) ||  (TARGET_KEY2_EN > 0) || (TARGET_KEY3_EN > 0) || (TARGET_KEY4_EN > 0)
+	|| (TARGET_KEY_SELECT_EN > 0) || (TARGET_KEY_UP_EN > 0) || (TARGET_KEY_DOWN_EN > 0) || (TARGET_KEY_LEFT_EN > 0) ||  (TARGET_KEY_RIGHT_EN > 0)
     extern void keyInit (void);    
 #endif
+
 
 /*********************************************************************************************************
 ** Function name:           keyRead                                                                     **
@@ -268,8 +432,10 @@ extern void IntDisAll (void);
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
 #if (TARGET_KEY1_EN > 0) ||  (TARGET_KEY2_EN > 0) || (TARGET_KEY3_EN > 0) || (TARGET_KEY4_EN > 0)
+	|| (TARGET_KEY_SELECT_EN > 0) || (TARGET_KEY_UP_EN > 0) || (TARGET_KEY_DOWN_EN > 0) || (TARGET_KEY_LEFT_EN > 0) ||  (TARGET_KEY_RIGHT_EN > 0)
     extern INT8U keyRead (void);    
 #endif
+
 
 /*********************************************************************************************************
 ** Function name:           timer0AInit                                                                 **
@@ -286,6 +452,7 @@ extern void IntDisAll (void);
     extern void timer0AInit (INT32U  ulTick, INT8U  ucPrio);
 #endif
 
+
 /*********************************************************************************************************
 ** Function name:           timer0AISR                                                                  **
 ** Descriptions:            Timeout interrupt handler of Timer0A                                        **     
@@ -299,6 +466,8 @@ extern void IntDisAll (void);
 #if TARGET_TMR0A_EN > 0
     extern void timer0AISR (void);
 #endif
+
+
 /*********************************************************************************************************
 ** Function name:           tickISRHandler                                                              **
 ** Descriptions:            Timeout interrupt handler of system timer                                   **     
@@ -312,7 +481,21 @@ extern void IntDisAll (void);
 extern void tickISRHandler (void);
 
 
-unsigned long InvertTmperatur(unsigned long ulValue);
+
+/*********************************************************************************************************
+** Function name:           InvertTemperature                                                           **
+** Descriptions:            Invert the temperature                                                      **     
+** input parameters:        none                                                                        **
+** output parameters:       none                                                                        **
+** Returned value:          noe                                                                         **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            12-04-2013                                                                  **
+*********************************************************************************************************/ 
+#if TARGET_ADC_EN > 0
+	extern INT32U InvertTemperature(INT32U ulValue);
+#endif
+
 
 /*********************************************************************************************************
 ** Function name:           InitADC                                                                     **
@@ -324,8 +507,24 @@ unsigned long InvertTmperatur(unsigned long ulValue);
 ** Created by:              long.luo                                                                    **
 ** Created Date:            11-04-2013                                                                  **
 *********************************************************************************************************/
-extern void InitADC(void);
-unsigned long ADCSample(void);
+#if TARGET_ADC_EN > 0
+	extern void InitADC(void);
+#endif
+
+
+/*********************************************************************************************************
+** Function name:           ADCSample                                                                   **
+** Descriptions:            Initialize the target board                                                 **     
+** input parameters:        none                                                                        **
+** output parameters:       none                                                                        **
+** Returned value:          noe                                                                         **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            10-04-2013                                                                  **
+*********************************************************************************************************/ 
+#if TARGET_ADC_EN > 0
+	extern INT32U ADCSample(void);
+#endif
 
 
 /*********************************************************************************************************

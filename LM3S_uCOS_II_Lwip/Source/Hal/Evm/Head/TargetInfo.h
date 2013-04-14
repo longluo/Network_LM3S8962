@@ -19,9 +19,12 @@
 #ifndef __DATA_H 
 #define __DATA_H 
 
+
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include <Target.h>
 
 #define  MAX_ADC_CHN    8
 
@@ -38,13 +41,26 @@ typedef struct
     uint16 ADC_CH[MAX_ADC_CHN];    
 }stCurADC;
 
+#ifdef TARGET_PWM_EN
+typedef struct
+{
+	uint32 ulFrequency;
+	uint32 ulDutyCycle;	
+	uint32 ulPWMClock;
+}stCurPWM;
+#endif
+
 typedef struct 
 {
     uint32      uVcc;       // Target Vcc, lsd is 0.01V
     uint32      uTemp;      // Target temperature, lsd is 0.1C
     stCurADC    stADC;      // 
     stCurTime   stTime;     //
+#ifdef TARGET_PWM_EN
+    stCurPWM	stPWM;
+#endif
 }stCurPhysics;
+
 
 #ifdef __cplusplus
     }
@@ -52,6 +68,7 @@ typedef struct
 
 
 #endif
+
 /*********************************************************************************************************
   END FILE 
 *********************************************************************************************************/
