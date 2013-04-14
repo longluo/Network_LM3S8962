@@ -35,6 +35,7 @@ static OS_STK Task_KeyStk[TASK_KEY_STK_SIZE];
 static OS_STK Task_DispStk[TASK_DISP_STK_SIZE];
 static OS_STK Task_TempStk[TASK_TEMP_STK_SIZE];
 static OS_STK Task_RTCStk[TASK_RTC_STK_SIZE];
+static OS_STK Task_BuzStk[TASK_BUZ_STK_SIZE];
 
 
 /*********************************************************************************************************
@@ -42,10 +43,12 @@ static OS_STK Task_RTCStk[TASK_RTC_STK_SIZE];
 *********************************************************************************************************/
 static void taskStart (void  *parg);                                    /*  The start task              */
 static void taskLed (void  *parg);
+static void taskUart(void *parg);
 static void taskDisp (void *parg);
 static void taskKey (void *parg);
-static void taskTemp (void *parg);                                      /**/
+static void taskTemp (void *parg);                                     
 static void taskRTC (void *parg);
+static void taskBuz(void *parg);
 
 extern stCurPhysics TargetInfo;
 
@@ -99,10 +102,16 @@ static void taskStart (void  *parg)
     OSTaskCreate (taskLed, (void *)0,           
                   &Task_LedStk[TASK_LED_STK_SIZE - 1], 
                   TASK_LED_PRIO);                                       /*  Initialize taskLed           */ 
+
+/*
+    OSTaskCreate(taskUart, (void *)0, 
+    			&Task_UartStk[TASK_UART_STK_SIZE - 1],
+    			TASK_UART_PRIO);
     
-    /*OSTaskCreate (taskKey, (void *)0,
+    OSTaskCreate (taskKey, (void *)0,
                   &Task_KeyStk[TASK_KEY_STK_SIZE - 1],
-                  TASK_KEY_PRIO);*/
+                  TASK_KEY_PRIO);
+*/               
 
     OSTaskCreate (taskDisp, (void *)0,          
                   &Task_DispStk[TASK_DISP_STK_SIZE - 1], 
@@ -111,11 +120,16 @@ static void taskStart (void  *parg)
     OSTaskCreate (taskTemp, (void*)0,
                   &Task_TempStk[TASK_TEMP_STK_SIZE - 1],
                   TASK_TEMP_PRIO);   
-     
 
     OSTaskCreate(taskRTC, (void*)0,
                  &Task_RTCStk[TASK_RTC_STK_SIZE - 1],
                  TASK_RTC_PRIO); 
+/*
+	OSTaskCreate(taskBuz, (void*)0,
+				&Task_BuzStk[TASK_BUZ_STK_SIZE - 1],
+				TASK_BUZ_PRIO);
+				*/
+                 
     while (1) 
     {                             
         OSTaskSuspend(OS_PRIO_SELF);                               /*  The start task can be pended here */
@@ -142,11 +156,33 @@ static  void  taskLed (void  *parg)
 {
     (void)parg;
 
-    LedOn(1);
+    LedOn(0);
     while (1) 
     {
-        LedToggle(1);                                                   /*  Lighting LED1               */              
+        LedToggle(0);                                                   /*  Lighting LED                */              
         OSTimeDly(OS_TICKS_PER_SEC/2);                                  /*  Delay 0.5s                  */                  
+    }
+}
+
+
+/*********************************************************************************************************
+** Function name:           taskUart                                                                     **
+** Descriptions:            UART Task                                                                    **
+** input parameters:        *parg                                                                       **
+** output parameters:       none                                                                        **
+** Returned value:          none                                                                        **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            12-04-2013                                                                  **
+*********************************************************************************************************/
+static  void  taskUart (void  *parg)
+{
+    (void)parg;
+
+    while (1) 
+    {
+		//UARTCharPut(unsigned long ulBase, unsigned char ucData);
+        //OSTimeDly(OS_TICKS_PER_SEC);                                  /*  Delay 0.5s                  */                  
     }
 }
 
@@ -194,7 +230,7 @@ static void taskDisp (void  *parg)
     RIT128x96x4Init(1000000);
                              
     (void) parg;
-    while(1)
+    while (1)
     {               
         sprintf(buf,"uC/OS-II v%ld.%ld ", OS_VERSION / 100, (OS_VERSION % 100));
         RIT128x96x4StringDraw(buf, 25, 10, 15);
@@ -249,6 +285,7 @@ static void taskRTC(void *parg)
                 }
             }
         }
+        
         OSTimeDly(OS_TICKS_PER_SEC);
     }
 }
@@ -276,10 +313,38 @@ static void taskTemp(void *parg)
     while (1)
     {
         ulValue = ADCSample();
-        TargetInfo.uTemp = InvertTmperatur(ulValue);
+        TargetInfo.uTemp = InvertTemperature(ulValue);
         OSTimeDly(OS_TICKS_PER_SEC * 3);
     }
 }
+
+
+/*********************************************************************************************************
+** Function name:           taskBuz                                                                     **
+** Descriptions:            Buzzer Task                                                                 **
+** input parameters:        *parg                                                                       **
+** output parameters:       none                                                                        **
+** Returned value:          none                                                                        **
+==========================================================================================================
+** Created by:              long.luo                                                                    **
+** Created Date:            12-04-2013                                                                  **
+*********************************************************************************************************/
+static void taskBuz(void *parg)
+{
+	TargetInfo.stPWM.ulFrequency = 440;
+	TargetInfo.stPWM.ulDutyCycle = 50;
+	
+	SetPWMDutyCycle(TargetInfo.stPWM.ulDutyCycle);
+	BuzFrequency(TargetInfo.stPWM.ulFrequency);
+	
+    while (1)
+    {
+    	BuzToggle();
+        //OSTimeDly(OS_TICKS_PER_SEC / 2);
+        OSTimeDly(OS_TICKS_PER_SEC);
+    }
+}
+
 
 /*********************************************************************************************************
   END FILE

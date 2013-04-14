@@ -10,7 +10,7 @@
 ** Description:             The main function example template                                          **
 **                                                                                                      **
 **--------------------------------------------------------------------------------------------------------
-** Created By:              long.luo                                                                **
+** Created By:              long.luo                                                                    **
 ** Created date:            10-04-2013                                                                  **
 ** Version:                 1.0                                                                         **
 ** Descriptions:            The original version                                                        **
@@ -33,17 +33,20 @@ extern "C" {
 #define  TASK_KEY_PRIO                3
 #define  TASK_DISP_PRIO               4
 #define  TASK_TEMP_PRIO               5
-#define  TASK_RTC_PRIO               10
+#define	 TASK_BUZ_PRIO				  6
+#define  TASK_RTC_PRIO                7
+
               
 /*********************************************************************************************************
   TASK STACK SIZES  
 *********************************************************************************************************/
 #define  TASK_START_STK_SIZE          50
-#define  TASK_LED_STK_SIZE            50
 #define  TASK_UART_STK_SIZE           50
+#define  TASK_LED_STK_SIZE            50
 #define  TASK_DISP_STK_SIZE           50
 #define  TASK_KEY_STK_SIZE            50
-#define  TASK_TEMP_STK_SIZE           50  
+#define  TASK_TEMP_STK_SIZE           50
+#define  TASK_BUZ_STK_SIZE			  50
 #define  TASK_RTC_STK_SIZE            50
 
 
