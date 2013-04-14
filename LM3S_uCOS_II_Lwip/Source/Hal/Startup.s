@@ -52,6 +52,7 @@ HeapMem
 		EXTERN  tickISRHandler
 	   	;EXTERN  keyISR
         EXTERN  ADC3IntHandler
+        ;EXTERN  UARTIntHandler
 	
 ;*********************************************************************************************************
 ;*  Indicate that the code in this file preserves 8-byte alignment of the stack.              
@@ -202,3 +203,4 @@ __user_initial_stackheap
 ;*  End Of File                                                     
 ;*********************************************************************************************************
         END
+        
