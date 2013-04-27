@@ -16,6 +16,7 @@
 ** Descriptions:            The original version                                                        **
 **                                                                                                      **
 *********************************************************************************************************/
+
 #include "lwip/opt.h"
 #include "lwip/sys.h"
 #include "arch/sys_arch.h"
@@ -435,6 +436,5 @@ sys_arch_unprotect(sys_prot_t lev)
     IntMasterEnable();
   }
 }
+
 #endif /* SYS_LIGHTWEIGHT_PROT */
-
-

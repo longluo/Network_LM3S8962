@@ -16,7 +16,7 @@
 #define  OS_uCOS_II_H
 
 #include  "os_cpu.h"
-#include  "os_cfg.h"
+#include  "OS_CFG.H"
 
 #ifdef __cplusplus
 extern "C" {

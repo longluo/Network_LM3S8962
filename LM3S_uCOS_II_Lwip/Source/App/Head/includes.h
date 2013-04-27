@@ -96,7 +96,7 @@ typedef double          fp64;                                           /* Doubl
 *********************************************************************************************************/
 //#include <os_cfg.h>
 #include <os_cpu.h>
-#include <ucos_ii.h>
+#include <uCOS_II.H>
 #include <Target.h>             
 #include <rit128x96x4.h>
 #include <TargetInfo.h>
@@ -104,7 +104,7 @@ typedef double          fp64;                                           /* Doubl
 /*********************************************************************************************************
   User's header files 
 *********************************************************************************************************/
-#include <Main.h>
+#include <main.h>
 
 #ifdef __cplusplus
     }

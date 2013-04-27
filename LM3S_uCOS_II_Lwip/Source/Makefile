@@ -45,7 +45,10 @@ IPATH=.
 IPATH+=./App/Head
 IPATH+=./Hal/Evm/Head
 IPATH+=./Hal/Oled/Head
+IPATH+=./LM3_Lib
 IPATH+=./LM3_Lib/inc
+IPATH+=./lwip-1.3.2/arch
+IPATH+=./lwip-1.3.2/src/include
 IPATH+=./uCOS-II/Ports/Head
 IPATH+=./uCOS-II/Source/Head
 
@@ -120,8 +123,8 @@ ${COMPILER}/ucos_lwip.axf: ${COMPILER}/rit128x96x4.o
 ${COMPILER}/ucos_lwip.axf: ${COMPILER}/startup_${COMPILER}.o
 ${COMPILER}/ucos_lwip.axf: ${ROOT}/LM3_Lib/DriverLib/libdriver.a
 ${COMPILER}/ucos_lwip.axf: ucos_lwip.ld
-SCATTERgcc_ucoslwip=ucos_lwip.ld
-ENTRY_ucoslwip=ResetISR
+SCATTERgcc_ucos_lwip=ucos_lwip.ld
+ENTRY_ucos_lwip=ResetISR
 
 #
 # Include the automatically generated dependency files.

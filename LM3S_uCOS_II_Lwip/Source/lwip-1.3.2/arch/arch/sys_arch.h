@@ -54,13 +54,14 @@
 ** Description:           
 **
 *********************************************************************************************************/
+
 #ifndef __ARCH_SYS_ARCH_H__
 #define __ARCH_SYS_ARCH_H__
 
 #include <os_cpu.h>
 #include <os_cfg.h>
-#include <ucos_ii.h>
-#include "arch\cc.h"
+#include <uCOS_II.H>
+#include "arch/cc.h"
 
 #ifndef NULL
 #define NULL  (void *)0
@@ -88,4 +89,3 @@ typedef unsigned char    sys_prot_t;
 typedef u8_t             sys_thread_t;
 
 #endif /* __ARCH_SYS_ARCH_H__ */
-
