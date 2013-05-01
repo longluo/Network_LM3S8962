@@ -23,15 +23,17 @@
 #include "ethernet.h"
 #include "flash.h"
 #include "gpio.h"
+#include "uart.h"
 #include "interrupt.h"
 #include "sysctl.h"
 #include "systick.h"
 #include "rit128x96x4.h"
 #include "uip/uip.h"
 #include "uip/uip_arp.h"
-#include "httpd/httpd.h"
-#include "apps/dhcpc/dhcpc.h"
-#include "utils/ustdlib.h"
+#include "Utils/ustdlib.h"
+#include "Utils/uartstdio.h"
+#include "clock-arch.h"
+
 
 
 //*****************************************************************************
@@ -49,6 +51,13 @@
 //! http://www.sics.se/~adam/uip/
 //
 //*****************************************************************************
+
+
+#ifndef NULL
+#define NULL (void *)0
+#endif /* NULL */
+
+
 
 //*****************************************************************************
 //
@@ -99,22 +108,22 @@ volatile unsigned long g_ulTickCounter = 0;
 //
 //*****************************************************************************
 /* use static IP */
-//#define USE_STATIC_IP																	 
+#define USE_STATIC_IP																	 
 
 #ifndef DEFAULT_IPADDR0
-#define DEFAULT_IPADDR0         192 //169
+#define DEFAULT_IPADDR0         10 //169
 #endif
 
 #ifndef DEFAULT_IPADDR1
-#define DEFAULT_IPADDR1         168 //254
+#define DEFAULT_IPADDR1         0 //254
 #endif
 
 #ifndef DEFAULT_IPADDR2
-#define DEFAULT_IPADDR2         21 //19
+#define DEFAULT_IPADDR2         0 //19
 #endif
 
 #ifndef DEFAULT_IPADDR3
-#define DEFAULT_IPADDR3         63
+#define DEFAULT_IPADDR3         105
 #endif
 
 #ifndef DEFAULT_NETMASK0
@@ -126,12 +135,13 @@ volatile unsigned long g_ulTickCounter = 0;
 #endif
 
 #ifndef DEFAULT_NETMASK2
-#define DEFAULT_NETMASK2        0
+#define DEFAULT_NETMASK2        255
 #endif
 
 #ifndef DEFAULT_NETMASK3
 #define DEFAULT_NETMASK3        0
 #endif
+
 
 //*****************************************************************************
 //
@@ -236,17 +246,23 @@ DisplayIPAddress(void *ipaddr, unsigned long ulCol, unsigned long ulRow)
     usprintf(pucBuf, "%d.%d.%d.%d", pucTemp[0], pucTemp[1], pucTemp[2],
              pucTemp[3]);
 
+	//
+	UARTprintf("IP Addr: %d.%d.%d.%d\n", pucTemp[0], pucTemp[1], pucTemp[2],
+             pucTemp[3]);
+
     //
     // Display the string.
     //
     RIT128x96x4StringDraw(pucBuf, ulCol, ulRow, 15);
 }
 
+
 //*****************************************************************************
 //
 // Callback for when DHCP client has been configured.
 //
 //*****************************************************************************
+/*
 void
 dhcpc_configured(const struct dhcpc_state *s)
 {
@@ -254,6 +270,59 @@ dhcpc_configured(const struct dhcpc_state *s)
     uip_setnetmask(&s->netmask);
     uip_setdraddr(&s->default_router);
     DisplayIPAddress((void *)&s->ipaddr, 18, 24);
+}
+*/
+
+/*******************************WebClient Set***************************************/
+//DNS 找到对应服务器IP
+void resolv_found(char *name, u16_t *ipaddr)			
+{
+	if (ipaddr == NULL) 
+	{
+		UARTprintf("Host '%s' not found.\n", name);
+	} 
+	else 
+	{
+		UARTprintf("Found name '%s' = %d.%d.%d.%d\n", name,
+									htons(ipaddr[0]) >> 8,
+									htons(ipaddr[0]) & 0xff,
+									htons(ipaddr[1]) >> 8,
+									htons(ipaddr[1]) & 0xff);
+		if (webclient_get("10.0.0.100", 80, "/sendnotify?cgi"))       
+		{
+			UARTprintf("the connection was initiated");
+		}
+		else
+		{
+			UARTprintf("the host name could not be found in the cache  or TCP connection could not be created.");
+		}
+	}	   
+}
+
+
+void webclient_closed(void)
+{
+	UARTprintf("Webclient: connection closed\n");
+}
+
+void webclient_aborted(void)
+{
+	UARTprintf("Webclient: connection aborted\n");
+}
+
+void webclient_timedout(void)
+{
+	UARTprintf("Webclient: connection timed out\n");
+}
+
+void webclient_connected(void)
+{
+	UARTprintf("Webclient: connected, waiting for data...\n");
+}
+
+void webclient_datahandler(char *data, u16_t len)
+{
+	UARTprintf("Webclient: got %d bytes of data.\n", len);
 }
 
 
@@ -279,10 +348,49 @@ main(void)
                    SYSCTL_XTAL_8MHZ);
 
     //
+    // Enable the peripherals used by the application.
+    //
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOG);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_PWM);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+
+    //
+    // Configure the GPIOs used to read the state of the on-board push buttons.
+    //
+    GPIOPinTypeGPIOInput(GPIO_PORTE_BASE,
+                         GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
+    GPIOPadConfigSet(GPIO_PORTE_BASE,
+                     GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3,
+                     GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
+    GPIOPinTypeGPIOInput(GPIO_PORTF_BASE, GPIO_PIN_1);
+    GPIOPadConfigSet(GPIO_PORTF_BASE, GPIO_PIN_1, GPIO_STRENGTH_2MA,
+                     GPIO_PIN_TYPE_STD_WPU);
+
+    //
+    // Configure the LED, speaker, and UART GPIOs as required.
+    //
+    GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+    GPIOPinTypePWM(GPIO_PORTG_BASE, GPIO_PIN_1);
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_0);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_0, 0);
+
+    //
+    // Configure the first UART for 115,200, 8-N-1 operation.
+    //
+    UARTConfigSetExpClk(UART0_BASE, SysCtlClockGet(), 115200,
+                        (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
+                         UART_CONFIG_PAR_NONE));
+    UARTEnable(UART0_BASE);
+
+    //
     // Initialize the OLED display.
     //
     RIT128x96x4Init(1000000);
-    RIT128x96x4StringDraw("Ethernet with uIP", 12, 0, 15);
+    RIT128x96x4StringDraw("uIP WebClient", 12, 0, 15);
 
     //
     // Enable and Reset the Ethernet Controller.
@@ -360,6 +468,14 @@ main(void)
     IntMasterEnable();
 
     //
+    // Initialize the UART as a console for text I/O.
+    //
+    UARTStdioInit(0);
+    UARTprintf("Start...\n");
+    
+	UARTprintf("uip_init\n");
+
+    //
     // Initialize the uIP TCP/IP stack.
     //
     uip_init();
@@ -396,7 +512,7 @@ main(void)
         //
         RIT128x96x4StringDraw("MAC Address", 0, 16, 15);
         RIT128x96x4StringDraw("Not Programmed!", 0, 24, 15);
-        while(1)
+        while (1)
         {
         }
     }
@@ -419,11 +535,6 @@ main(void)
     EthernetMACAddrSet(ETH_BASE, (unsigned char *)&sTempAddr);
     uip_setethaddr(sTempAddr);
 
-    //
-    // Initialize the TCP/IP Application (e.g. web server).
-    //
-    httpd_init();
-
 #ifndef USE_STATIC_IP
     //
     // Initialize the DHCP Client Application.
@@ -431,6 +542,19 @@ main(void)
     dhcpc_init(&sTempAddr.addr[0], 6);
     dhcpc_request();
 #endif
+
+	UARTprintf("webclient_init\n");
+
+    //
+    // Initialize the TCP/IP Application.
+    //
+    webclient_init();
+    
+    resolv_init();
+    uip_ipaddr(ipaddr, 8, 8, 8, 8);
+    resolv_conf(ipaddr);
+	DisplayIPAddress(ipaddr, 18, 32);
+    resolv_query("winginsky.oicp.net");
 
     //
     // Main Application Loop.
@@ -463,7 +587,7 @@ main(void)
         //
         lPacketLength = EthernetPacketGetNonBlocking(ETH_BASE, uip_buf,
                                                      sizeof(uip_buf));
-        if(lPacketLength > 0)
+        if (lPacketLength > 0)
         {
             //
             // Set uip_len for uIP stack usage.
@@ -482,7 +606,7 @@ main(void)
             //
             // Process incoming IP packets here.
             //
-            if(BUF->type == htons(UIP_ETHTYPE_IP))
+            if (BUF->type == htons(UIP_ETHTYPE_IP))
             {
                 uip_arp_ipin();
                 uip_input();
@@ -492,7 +616,7 @@ main(void)
                 // should be sent out on the network, the global variable
                 // uip_len is set to a value > 0.
                 //
-                if(uip_len > 0)
+                if (uip_len > 0)
                 {
                     uip_arp_out();
                     EthernetPacketPut(ETH_BASE, uip_buf, uip_len);
@@ -503,7 +627,7 @@ main(void)
             //
             // Process incoming ARP packets here.
             //
-            else if(BUF->type == htons(UIP_ETHTYPE_ARP))
+            else if (BUF->type == htons(UIP_ETHTYPE_ARP))
             {
                 uip_arp_arpin();
 
@@ -512,7 +636,7 @@ main(void)
                 // should be sent out on the network, the global variable
                 // uip_len is set to a value > 0.
                 //
-                if(uip_len > 0)
+                if (uip_len > 0)
                 {
                     EthernetPacketPut(ETH_BASE, uip_buf, uip_len);
                     uip_len = 0;
@@ -523,10 +647,10 @@ main(void)
         //
         // Process TCP/IP Periodic Timer here.
         //
-        if(lPeriodicTimer > UIP_PERIODIC_TIMER_MS)
+        if (lPeriodicTimer > UIP_PERIODIC_TIMER_MS)
         {
             lPeriodicTimer = 0;
-            for(ulTemp = 0; ulTemp < UIP_CONNS; ulTemp++)
+            for (ulTemp = 0; ulTemp < UIP_CONNS; ulTemp++)
             {
                 uip_periodic(ulTemp);
 

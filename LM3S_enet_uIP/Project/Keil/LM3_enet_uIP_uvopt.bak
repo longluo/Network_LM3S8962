@@ -191,7 +191,7 @@
 
   <Group>
     <GroupName>HAL</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -326,10 +326,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>70</ColumnNumber>
+      <ColumnNumber>52</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>42</TopLine>
-      <CurrentLine>42</CurrentLine>
+      <CurrentLine>50</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\Source\uip-1.0\apps\httpd\httpd.c</PathWithFileName>
       <FilenameWithoutPath>httpd.c</FilenameWithoutPath>
@@ -410,9 +410,9 @@
         </Doc>
         <Doc>
           <Name>..\..\Source\uip-1.0\apps\httpd\httpd.c</Name>
-          <ColumnNumber>70</ColumnNumber>
+          <ColumnNumber>52</ColumnNumber>
           <TopLine>42</TopLine>
-          <CurrentLine>42</CurrentLine>
+          <CurrentLine>50</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

@@ -165,19 +165,19 @@
 
   <Group>
     <GroupName>Application</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>1</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>376</TopLine>
+      <CurrentLine>383</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\Source\App\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -186,12 +186,12 @@
 
   <Group>
     <GroupName>HAL</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>2</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -204,8 +204,8 @@
       <FilenameWithoutPath>startup_rvmdk.S</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>3</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -221,12 +221,12 @@
 
   <Group>
     <GroupName>uIP</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>4</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -239,8 +239,8 @@
       <FilenameWithoutPath>uip.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -253,8 +253,8 @@
       <FilenameWithoutPath>uip_arp.c</FilenameWithoutPath>
     </File>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>6</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -266,6 +266,20 @@
       <PathWithFileName>..\..\Source\uip-1.0\uip\uip_timer.c</PathWithFileName>
       <FilenameWithoutPath>uip_timer.c</FilenameWithoutPath>
     </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>7</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\Source\uip-1.0\uip\uiplib.c</PathWithFileName>
+      <FilenameWithoutPath>uiplib.c</FilenameWithoutPath>
+    </File>
   </Group>
 
   <Group>
@@ -274,8 +288,8 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -287,27 +301,27 @@
       <PathWithFileName>..\..\Source\Utils\ustdlib.c</PathWithFileName>
       <FilenameWithoutPath>ustdlib.c</FilenameWithoutPath>
     </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>9</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>34</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>16</TopLine>
+      <CurrentLine>16</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\Source\Utils\uartstdio.c</PathWithFileName>
+      <FilenameWithoutPath>uartstdio.c</FilenameWithoutPath>
+    </File>
   </Group>
 
   <Group>
     <GroupName>DHCP</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
-    <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\..\Source\uip-1.0\apps\dhcpc\dhcpc.c</PathWithFileName>
-      <FilenameWithoutPath>dhcpc.c</FilenameWithoutPath>
-    </File>
   </Group>
 
   <Group>
@@ -316,18 +330,46 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>342</TopLine>
+      <CurrentLine>354</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\Source\uip-1.0\apps\webclient\webclient.c</PathWithFileName>
       <FilenameWithoutPath>webclient.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>11</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>434</TopLine>
+      <CurrentLine>438</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\Source\uip-1.0\apps\resolv\resolv.c</PathWithFileName>
+      <FilenameWithoutPath>resolv.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>12</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>31</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>81</TopLine>
+      <CurrentLine>81</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\Source\uip-1.0\apps\webclient\webclient-strings.c</PathWithFileName>
+      <FilenameWithoutPath>webclient-strings.c</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -337,8 +379,8 @@
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
-      <GroupNumber>0</GroupNumber>
-      <FileNumber>0</FileNumber>
+      <GroupNumber>7</GroupNumber>
+      <FileNumber>13</FileNumber>
       <FileType>4</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -353,8 +395,138 @@
   </Group>
 
   <AlienFiles>
+    <PathWithFilename>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\apps\dhcpc\dhcpc.h</PathWithFilename>
+    <TopLine>22</TopLine>
+    <CurrentLine>32</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\uip\uip.h</PathWithFilename>
+    <TopLine>46</TopLine>
+    <CurrentLine>46</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\apps\resolv\resolv.h</PathWithFilename>
+    <TopLine>40</TopLine>
+    <CurrentLine>51</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\App\uip-conf.h</PathWithFilename>
+    <TopLine>117</TopLine>
+    <CurrentLine>121</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\apps\dhcpc\dhcpc.c</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>1</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
     <PathWithFilename>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\apps\webclient\webclient.h</PathWithFilename>
-    <TopLine>68</TopLine>
+    <TopLine>73</TopLine>
     <CurrentLine>75</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
@@ -383,19 +555,73 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>1</ActiveTab>
+      <ActiveTab>6</ActiveTab>
       <Documents>
         <Doc>
-          <Name>..\..\Source\uip-1.0\apps\webclient\webclient.h</Name>
-          <ColumnNumber>27</ColumnNumber>
-          <TopLine>68</TopLine>
+          <Name>..\..\Source\uip-1.0\apps\webclient/webclient.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>73</TopLine>
           <CurrentLine>75</CurrentLine>
         </Doc>
         <Doc>
-          <Name>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\apps\webclient\webclient.c</Name>
+          <Name>..\..\Source\uip-1.0\apps\webclient\webclient.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>57</TopLine>
-          <CurrentLine>61</CurrentLine>
+          <TopLine>342</TopLine>
+          <CurrentLine>354</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\apps\dhcpc\dhcpc.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Source\App\main.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>376</TopLine>
+          <CurrentLine>383</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Source\App\uip-conf.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>117</TopLine>
+          <CurrentLine>121</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Source\Utils\uartstdio.c</Name>
+          <ColumnNumber>34</ColumnNumber>
+          <TopLine>16</TopLine>
+          <CurrentLine>16</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Source\uip-1.0\apps\resolv\resolv.h</Name>
+          <ColumnNumber>40</ColumnNumber>
+          <TopLine>40</TopLine>
+          <CurrentLine>51</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Source\uip-1.0\uip/uip.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>46</TopLine>
+          <CurrentLine>46</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\uip-1.0\apps\dhcpc\dhcpc.h</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>22</TopLine>
+          <CurrentLine>32</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Source\uip-1.0\apps\resolv\resolv.c</Name>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>434</TopLine>
+          <CurrentLine>438</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\..\Source\uip-1.0\apps\webclient\webclient-strings.c</Name>
+          <ColumnNumber>31</ColumnNumber>
+          <TopLine>81</TopLine>
+          <CurrentLine>81</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

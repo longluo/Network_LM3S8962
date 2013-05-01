@@ -346,7 +346,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Source;..\..\Source\App;..\..\Source\Hal;..\..\Source\uip-1.0\apps;..\..\Source\uip-1.0\apps\dhcpc;..\..\Source\uip-1.0\apps\httpd;..\..\Source\uip-1.0\uip;..\..\Source\uip-1.0;..\..\Source\LM3_Lib\inc</IncludePath>
+              <IncludePath>..\..\Source;..\..\Source\App;..\..\Source\Hal;..\..\Source\uip-1.0\uip;..\..\Source\uip-1.0\apps;..\..\Source\uip-1.0\apps\dhcpc;..\..\Source\uip-1.0\apps\httpd;..\..\Source\uip-1.0\apps\resolv;..\..\Source\uip-1.0;..\..\Source\LM3_Lib\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -426,6 +426,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\Source\uip-1.0\uip\uip_timer.c</FilePath>
             </File>
+            <File>
+              <FileName>uiplib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Source\uip-1.0\uip\uiplib.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -436,17 +441,15 @@
               <FileType>1</FileType>
               <FilePath>..\..\Source\Utils\ustdlib.c</FilePath>
             </File>
+            <File>
+              <FileName>uartstdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Source\Utils\uartstdio.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>DHCP</GroupName>
-          <Files>
-            <File>
-              <FileName>dhcpc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Source\uip-1.0\apps\dhcpc\dhcpc.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>Client</GroupName>
@@ -455,6 +458,16 @@
               <FileName>webclient.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Source\uip-1.0\apps\webclient\webclient.c</FilePath>
+            </File>
+            <File>
+              <FileName>resolv.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Source\uip-1.0\apps\resolv\resolv.c</FilePath>
+            </File>
+            <File>
+              <FileName>webclient-strings.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Source\uip-1.0\apps\webclient\webclient-strings.c</FilePath>
             </File>
           </Files>
         </Group>

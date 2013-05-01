@@ -1,26 +1,19 @@
-//*****************************************************************************
-//
-// uip-conf.h - uIP Project Specific Configuration File
-//
-// Copyright (c) 2007-2010 Texas Instruments Incorporated.  All rights reserved.
-// Software License Agreement
-// 
-// Texas Instruments (TI) is supplying this software for use solely and
-// exclusively on TI's microcontroller products. The software is owned by
-// TI and/or its suppliers, and is protected under applicable copyright
-// laws. You may not combine this software with "viral" open-source
-// software in order to form a larger program.
-// 
-// THIS SOFTWARE IS PROVIDED "AS IS" AND WITH ALL FAULTS.
-// NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT
-// NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. TI SHALL NOT, UNDER ANY
-// CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
-// DAMAGES, FOR ANY REASON WHATSOEVER.
-// 
-// This is part of revision 6459 of the EK-LM3S8962 Firmware Package.
-//
-//*****************************************************************************
+/************************************************************************************
+** File: - E:\ARM\lm3s8962projects\Network_LM3S8962\LM3S_uIP_Client\Source\App\uip-conf.h
+**  
+** Copyright (C), Long.Luo, All Rights Reserved!
+** 
+** Description: 
+**       uip-conf.h - uIP Project Specific Configuration File
+** 
+** Version: 1.1
+** Date created: 22:09:41,01/05/2013
+** Author: Long.Luo
+** 
+** --------------------------- Revision History: --------------------------------
+** 	<author>	<data>			<desc>
+** 
+************************************************************************************/
 
 #ifndef __UIP_CONF_H__
 #define __UIP_CONF_H__
@@ -120,12 +113,15 @@ typedef unsigned short uip_stats_t;
 // Here we include the header file for the application we are using in
 // this example
 //
-#include "httpd/httpd.h"
+#include "webclient/webclient.h"
+
+//
+#include "resolv.h"
 
 //
 // Define the uIP Application State type, based on the httpd.h state variable.
 //
-typedef struct httpd_state uip_tcp_appstate_t;
+typedef struct webclient_state uip_tcp_appstate_t;
 
 //
 // UIP_APPCALL: the name of the application function. This function
@@ -133,14 +129,15 @@ typedef struct httpd_state uip_tcp_appstate_t;
 // appfunc(void)").
 //
 #ifndef UIP_APPCALL
-#define UIP_APPCALL     httpd_appcall
+#define UIP_APPCALL     webclient_appcall
 #endif
 
 //
 // Here we include the header file for the DPCP client we are using in
 // this example
 //
-#include "dhcpc/dhcpc.h"
+//#include "dhcpc/dhcpc.h"
 
 //
 #endif // __UIP_CONF_H_
+

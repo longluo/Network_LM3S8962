@@ -352,6 +352,8 @@ newdata(void)
 void
 webclient_appcall(void)
 {
+	UARTprintf("webclient_appcall\n");
+	
   if(uip_connected()) {
     s.timer = 0;
     s.state = WEBCLIENT_STATE_STATUSLINE;

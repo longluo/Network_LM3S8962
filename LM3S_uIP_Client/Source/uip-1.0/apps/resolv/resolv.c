@@ -373,7 +373,8 @@ resolv_query(char *name)
 
   /*  printf("Using entry %d\n", i);*/
 
-  strcpy(nameptr->name, name);
+	strncpy( nameptr->name, name, sizeof(nameptr->name) );
+	nameptr->name[ sizeof(nameptr->name) - 1 ] = 0;
   nameptr->state = STATE_NEW;
   nameptr->seqno = seqno;
   ++seqno;
@@ -435,14 +436,16 @@ resolv_getserver(void)
  */
 /*---------------------------------------------------------------------------*/
 void
-resolv_conf(u16_t *dnsserver)
+resolv_conf(const u16_t *dnsserver)
 {
-  if(resolv_conn != NULL) {
-    uip_udp_remove(resolv_conn);
-  }
-  
-  resolv_conn = uip_udp_new(dnsserver, HTONS(53));
+	if (resolv_conn != NULL) 
+	{
+		uip_udp_remove(resolv_conn);
+	}
+	
+	resolv_conn = uip_udp_new((uip_ipaddr_t *)dnsserver, HTONS(53));
 }
+
 /*---------------------------------------------------------------------------*/
 /**
  * Initalize the resolver.
@@ -451,14 +454,37 @@ resolv_conf(u16_t *dnsserver)
 void
 resolv_init(void)
 {
-  static u8_t i;
-  
-  for(i = 0; i < RESOLV_ENTRIES; ++i) {
-    names[i].state = STATE_DONE;
-  }
+	static u8_t i;
+
+	for (i = 0; i < RESOLV_ENTRIES; ++i) 
+	{
+		names[i].state = STATE_DONE;
+	}
 
 }
 /*---------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------*/
+/*
+u8_t
+resolv_hostname(char *name, uip_ipaddr_t *ip, uint32_t timeout_ms)
+{
+	if( name == NULL ) return NULL;
+	u16_t *pip = resolv_lookup(name);
+	if( pip != NULL ) {
+		uip_ipaddr_copy( ip, pip );
+		return 1;
+	}
+
+	resolv_query(name);
+
+	pip =  resolv_lookup(name);
+	if( pip == NULL ) return 0;
+	uip_ipaddr_copy( ip, pip );
+	return 1;	
+}
+*/
+
+/*-----------------------------------------------------------------------------------*/
 /** @} */
 /** @} */
