@@ -89,3 +89,4 @@ typedef unsigned char    sys_prot_t;
 typedef u8_t             sys_thread_t;
 
 #endif /* __ARCH_SYS_ARCH_H__ */
+

@@ -387,9 +387,29 @@
           <GroupName>Application</GroupName>
           <Files>
             <File>
-              <FileName>Main.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\Source\App\Src\Main.c</FilePath>
+              <FilePath>..\..\Source\App\Src\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HAL</GroupName>
+          <Files>
+            <File>
+              <FileName>Target.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Source\Hal\Evm\Src\Target.c</FilePath>
+            </File>
+            <File>
+              <FileName>rit128x96x4.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Source\Hal\Oled\Src\rit128x96x4.c</FilePath>
+            </File>
+            <File>
+              <FileName>Startup_rvmdk.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\..\Source\Hal\Startup_rvmdk.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -660,26 +680,6 @@
               <FileName>driverlib.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\..\Source\LM3_Lib\DriverLib\rvmdk\driverlib.lib</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>HAL</GroupName>
-          <Files>
-            <File>
-              <FileName>Startup.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\..\Source\Hal\Startup.s</FilePath>
-            </File>
-            <File>
-              <FileName>Target.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Source\Hal\Evm\Src\Target.c</FilePath>
-            </File>
-            <File>
-              <FileName>rit128x96x4.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Source\Hal\Oled\Src\rit128x96x4.c</FilePath>
             </File>
           </Files>
         </Group>
