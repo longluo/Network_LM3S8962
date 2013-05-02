@@ -1,0 +1,442 @@
+---- ip_addr Matches (479 in 68 files) ----
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):#include "lwip/ip_addr.h"
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                   struct ip_addr *addr,
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                   struct ip_addr *addr,
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                   struct ip_addr *addr,
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                   struct netbuf *buf, struct ip_addr *addr, u16_t port);
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                            struct ip_addr *multiaddr,
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                            struct ip_addr *interface,
+Api.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t             netconn_gethostbyname(const char *name, struct ip_addr *addr);
+Api_lib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):netconn_getaddr(struct netconn *conn, struct ip_addr *addr, u16_t *port, u8_t local)
+Api_lib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):netconn_bind(struct netconn *conn, struct ip_addr *addr, u16_t port)
+Api_lib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):netconn_connect(struct netconn *conn, struct ip_addr *addr, u16_t port)
+Api_lib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):netconn_sendto(struct netconn *conn, struct netbuf *buf, struct ip_addr *addr, u16_t port)
+Api_lib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                         struct ip_addr *multiaddr,
+Api_lib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                         struct ip_addr *interface,
+Api_lib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):netconn_gethostbyname(const char *name, struct ip_addr *addr)
+Api_msg.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):    struct ip_addr *addr)
+Api_msg.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):   struct ip_addr *addr, u16_t port)
+Api_msg.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):      buf->toaddr = (struct ip_addr*)&iphdr->dest;
+Api_msg.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):do_dns_found(const char *name, struct ip_addr *ipaddr, void *arg)
+Api_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):#include "lwip/ip_addr.h"
+Api_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *ipaddr;
+Api_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *ipaddr;
+Api_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *multiaddr;
+Api_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *interface;
+Api_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr *addr;
+Autoip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):#include "lwip/ip_addr.h"
+Autoip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):static void autoip_create_addr(struct netif *netif, struct ip_addr *ipaddr);
+Autoip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):autoip_create_addr(struct netif *netif, struct ip_addr *ipaddr)
+Autoip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  struct ip_addr sn_mask, gw_addr;
+Autoip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  netif->ip_addr.addr = 0;
+Autoip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):    memset(&autoip->llipaddr, 0, sizeof(struct ip_addr));
+Autoip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):    struct ip_addr sipaddr, dipaddr;
+Autoip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):  struct ip_addr llipaddr;  /* the currently selected, probed, announced or used LL IP-Address */
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):#include "lwip/ip_addr.h"
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):static void dhcp_recv(void *arg, struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *addr, u16_t port);
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    ip_addr_set(&dhcp->offered_ip_addr, (struct ip_addr *)&dhcp->msg_in->yiaddr);
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    dhcp->dns_count = dhcp_get_option_byte(&option_ptr[1]) / (u32_t)sizeof(struct ip_addr);
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):      dns_setserver( n, (struct ip_addr *)(&(dhcp->offered_dns_addr[n].addr)));
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    dns_setserver( n, (struct ip_addr *)(&ip_addr_any));
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):void dhcp_arp_reply(struct netif *netif, struct ip_addr *addr)
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr sn_mask, gw_addr;
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):static void dhcp_recv(void *arg, struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *addr, u16_t port)
+Dhcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    dhcp->msg_out->ciaddr.addr = netif->ip_addr.addr;
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr server_ip_addr; /* dhcp server address that offered this lease */
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr offered_ip_addr;
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr offered_sn_mask;
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr offered_gw_addr;
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr offered_bc_addr;
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr offered_dns_addr[DHCP_MAX_DNS]; /* DNS server addresses */
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr offered_si_addr;
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  PACK_STRUCT_FIELD(struct ip_addr ciaddr);
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  PACK_STRUCT_FIELD(struct ip_addr yiaddr);
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  PACK_STRUCT_FIELD(struct ip_addr siaddr);
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  PACK_STRUCT_FIELD(struct ip_addr giaddr);
+Dhcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void dhcp_arp_reply(struct netif *netif, struct ip_addr *addr);
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr ipaddr;
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):static void dns_recv(void *s, struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *addr, u16_t port);
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):static struct ip_addr         dns_servers[DNS_MAX_SERVERS];
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr dnsserver;
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):dns_setserver(u8_t numdns, struct ip_addr *dnsserver)
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):struct ip_addr
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):dns_local_removehost(const char *hostname, const struct ip_addr *addr)
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):dns_local_addhost(const char *hostname, const struct ip_addr *addr)
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):dns_recv(void *arg, struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *addr, u16_t port)
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):          if((ntohs(ans.type) == DNS_RRTYPE_A) && (ntohs(ans.class) == DNS_RRCLASS_IN) && (ntohs(ans.len) == sizeof(struct ip_addr)) ) {
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):            MEMCPY( &(pEntry->ipaddr), (pHostname+SIZEOF_DNS_ANSWER), sizeof(struct ip_addr));
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):dns_gethostbyname(const char *hostname, struct ip_addr *addr, dns_found_callback found,
+Dns.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):typedef void (*dns_found_callback)(const char *name, struct ip_addr *ipaddr, void *callback_arg);
+Dns.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void           dns_setserver(u8_t numdns, struct ip_addr *dnsserver);
+Dns.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):struct ip_addr dns_getserver(u8_t numdns);
+Dns.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t          dns_gethostbyname(const char *hostname, struct ip_addr *addr,
+Dns.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):int            dns_local_removehost(const char *hostname, const struct ip_addr *addr);
+Dns.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t          dns_local_addhost(const char *hostname, const struct ip_addr *addr);
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):  struct ip_addr ipaddr;
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):static s8_t find_entry(struct ip_addr *ipaddr, u8_t flags, struct netif *netif);
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):static s8_t find_entry(struct ip_addr *ipaddr, u8_t flags);
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):static err_t update_arp_entry(struct netif *netif, struct ip_addr *ipaddr, struct eth_addr *ethaddr, u8_t flags);
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):find_entry(struct ip_addr *ipaddr, u8_t flags, struct netif *netif)
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):find_entry(struct ip_addr *ipaddr, u8_t flags)
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):update_arp_entry(struct netif *netif, struct ip_addr *ipaddr, struct eth_addr *ethaddr, u8_t flags)
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):etharp_find_addr(struct netif *netif, struct ip_addr *ipaddr,
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):         struct eth_addr **eth_ret, struct ip_addr **ip_ret)
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):  if (!ip_addr_netcmp(&(iphdr->src), &(netif->ip_addr), &(netif->netmask))) {
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):  struct ip_addr sipaddr, dipaddr;
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):      (hdr->_hwlen_protolen != htons((ETHARP_HWADDR_LEN << 8) | sizeof(struct ip_addr))) ||
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):  if (netif->ip_addr.addr == 0) {
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):    for_us = ip_addr_cmp(&dipaddr, &(netif->ip_addr));
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):      SMEMCPY(&hdr->sipaddr, &netif->ip_addr, sizeof(hdr->sipaddr));
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):    } else if (netif->ip_addr.addr == 0) {
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):etharp_output(struct netif *netif, struct pbuf *q, struct ip_addr *ipaddr)
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):    if (!ip_addr_netcmp(ipaddr, &(netif->ip_addr), &(netif->netmask))) {
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):etharp_query(struct netif *netif, struct ip_addr *ipaddr, struct pbuf *q)
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):           const struct eth_addr *hwsrc_addr, const struct ip_addr *ipsrc_addr,
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):           const struct eth_addr *hwdst_addr, const struct ip_addr *ipdst_addr,
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):  hdr->_hwlen_protolen = htons((ETHARP_HWADDR_LEN << 8) | sizeof(struct ip_addr));
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):etharp_request(struct netif *netif, struct ip_addr *ipaddr)
+Etharp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):                    (struct eth_addr *)netif->hwaddr, &netif->ip_addr, &ethzero,
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):#include "lwip/ip_addr.h"
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):s8_t etharp_find_addr(struct netif *netif, struct ip_addr *ipaddr,
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):         struct eth_addr **eth_ret, struct ip_addr **ip_ret);
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):err_t etharp_output(struct netif *netif, struct pbuf *q, struct ip_addr *ipaddr);
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):err_t etharp_query(struct netif *netif, struct ip_addr *ipaddr, struct pbuf *q);
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):err_t etharp_request(struct netif *netif, struct ip_addr *ipaddr);
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):#define etharp_gratuitous(netif) etharp_request((netif), &(netif)->ip_addr)
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):                 const struct eth_addr *hwsrc_addr, const struct ip_addr *ipsrc_addr,
+Etharp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\netif):                 const struct eth_addr *hwdst_addr, const struct ip_addr *ipdst_addr,
+Icmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  struct ip_addr tmpaddr;
+Icmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):#include "lwip/ip_addr.h"
+Icmp6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):  struct ip_addr tmpaddr;
+Icmp6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):      (struct ip_addr *)&(iphdr->src), ICMP_TTL, IP_PROTO_ICMP);
+Icmp6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):      (struct ip_addr *)&(iphdr->src), ICMP_TTL, IP_PROTO_ICMP);
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):static struct ip_addr     allsystems;
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):static struct ip_addr     allrouters;
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):igmp_lookfor_group(struct netif *ifp, struct ip_addr *addr)
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):igmp_lookup_group(struct netif *ifp, struct ip_addr *addr)
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):igmp_input(struct pbuf *p, struct netif *inp, struct ip_addr *dest)
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):igmp_joingroup(struct ip_addr *ifaddr, struct ip_addr *groupaddr)
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):    if ((netif->flags & NETIF_FLAG_IGMP) && ((ip_addr_isany(ifaddr) || ip_addr_cmp(&(netif->ip_addr), ifaddr)))) {
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):igmp_leavegroup(struct ip_addr *ifaddr, struct ip_addr *groupaddr)
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):    if ((netif->flags & NETIF_FLAG_IGMP) && ((ip_addr_isany(ifaddr) || ip_addr_cmp(&(netif->ip_addr), ifaddr)))) {
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):igmp_ip_output_if(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  struct ip_addr   src  = {0};
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  struct ip_addr*  dest = NULL;
+Igmp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):    ip_addr_set(&src, &((group->interface)->ip_addr));
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):#include "lwip/ip_addr.h"
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip): PACK_STRUCT_FIELD(struct ip_addr igmp_group_address);
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):  struct ip_addr     group_address;
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):struct igmp_group *igmp_lookfor_group( struct netif *ifp, struct ip_addr *addr);
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):struct igmp_group *igmp_lookup_group( struct netif *ifp, struct ip_addr *addr);
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):void   igmp_input( struct pbuf *p, struct netif *inp, struct ip_addr *dest);
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t  igmp_joingroup( struct ip_addr *ifaddr, struct ip_addr *groupaddr);
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t  igmp_leavegroup( struct ip_addr *ifaddr, struct ip_addr *groupaddr);
+Igmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t  igmp_ip_output_if( struct pbuf *p, struct ip_addr *src, struct ip_addr *dest, u8_t ttl, u8_t proto, struct netif *netif);
+Inet.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):#include "lwip/ip_addr.h"
+Inet.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):       struct ip_addr *src, struct ip_addr *dest,
+Inet6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):       struct ip_addr *src, struct ip_addr *dest,
+Inet_chksum.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):       struct ip_addr *src, struct ip_addr *dest,
+Inet_chksum.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):       struct ip_addr *src, struct ip_addr *dest,
+Inet_chksum.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):#include "lwip/ip_addr.h"
+Inet_chksum.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):       struct ip_addr *src, struct ip_addr *dest,
+Inet_chksum.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):       struct ip_addr *src, struct ip_addr *dest,
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):ip_route(struct ip_addr *dest)
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):      if (ip_addr_netcmp(dest, &(netif->ip_addr), &(netif->netmask))) {
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  netif = ip_route((struct ip_addr *)&(iphdr->dest));
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  netif->output(netif, p, (struct ip_addr *)&(iphdr->dest));
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):      LWIP_DEBUGF(IP_DEBUG, ("ip_input: iphdr->dest 0x%"X32_F" netif->ip_addr 0x%"X32_F" (0x%"X32_F", 0x%"X32_F", 0x%"X32_F")\n",
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):          iphdr->dest.addr, netif->ip_addr.addr,
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):          netif->ip_addr.addr & netif->netmask.addr,
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):      if ((netif_is_up(netif)) && (!ip_addr_isany(&(netif->ip_addr)))) {
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):        if (ip_addr_cmp(&(iphdr->dest), &(netif->ip_addr)) ||
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):ip_output_if(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):err_t ip_output_if_opt(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):      ip_addr_set(&(iphdr->src), &(netif->ip_addr));
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  if (ip_addr_cmp(dest, &netif->ip_addr)) {
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):ip_output(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):ip_output_hinted(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):#include "lwip/ip_addr.h"
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):  struct ip_addr local_ip; \
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):  struct ip_addr remote_ip; \
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):  PACK_STRUCT_FIELD(struct ip_addr src);
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):  PACK_STRUCT_FIELD(struct ip_addr dest); 
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):struct netif *ip_route(struct ip_addr *dest);
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t ip_output(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t ip_output_if(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t ip_output_hinted(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t ip_output_if_opt(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):#include "lwip/ip_addr.h"
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):#define IP_PCB struct ip_addr local_ip; \
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):  struct ip_addr remote_ip; \
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):  struct ip_addr src, dest;          /* source and destination IP addresses */
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):struct netif *ip_route(struct ip_addr *dest);
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):err_t ip_output(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):err_t ip_output_if(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_route(struct ip_addr *dest)
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):    if (ip_addr_netcmp(dest, &(netif->ip_addr), &(netif->netmask))) {
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):  if ((netif = ip_route((struct ip_addr *)&(iphdr->dest))) == NULL) {
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):    ip_addr_debug_print(IP_DEBUG, ((struct ip_addr *)&(iphdr->dest)));
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):  ip_addr_debug_print(IP_DEBUG, ((struct ip_addr *)&(iphdr->dest)));
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):  netif->output(netif, p, (struct ip_addr *)&(iphdr->dest));
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):    ip_addr_debug_print(IP_DEBUG, ((struct ip_addr *)&(iphdr->dest)));
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):    LWIP_DEBUGF(IP_DEBUG, ("netif->ip_addr "));
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):    ip_addr_debug_print(IP_DEBUG, ((struct ip_addr *)&(iphdr->dest)));
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):    if (ip_addr_cmp(&(iphdr->dest), &(netif->ip_addr))) {
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_output_if (struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):      ip_addr_set(&(iphdr->src), &(netif->ip_addr));
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_output(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip6.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_output_hinted(struct pbuf *p, struct ip_addr *src, struct ip_addr *dest,
+Ip6_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):#include "lwip/ip_addr.h"
+Ip6_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_addr_netcmp(struct ip_addr *addr1, struct ip_addr *addr2,
+Ip6_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):                struct ip_addr *mask)
+Ip6_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_addr_cmp(struct ip_addr *addr1, struct ip_addr *addr2)
+Ip6_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_addr_set(struct ip_addr *dest, struct ip_addr *src)
+Ip6_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):  SMEMCPY(dest, src, sizeof(struct ip_addr));
+Ip6_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv6):ip_addr_isany(struct ip_addr *addr)
+Ipcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif\ppp):#define inet_ntoa(addr) ip_ntoa(((struct ip_addr*)&(addr)))
+Ip_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):#include "lwip/ip_addr.h"
+Ip_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):const struct ip_addr ip_addr_any = { IP_ADDR_ANY_VALUE };
+Ip_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):const struct ip_addr ip_addr_broadcast = { IP_ADDR_BROADCAST_VALUE };
+Ip_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):u8_t ip_addr_isbroadcast(struct ip_addr *addr, struct netif *netif)
+Ip_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  else if (addr2test == netif->ip_addr.addr)
+Ip_addr.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):  else if (ip_addr_netcmp(addr, &(netif->ip_addr), &(netif->netmask))
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):struct ip_addr {
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):extern const struct ip_addr ip_addr_any;
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):extern const struct ip_addr ip_addr_broadcast;
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):#define IP_ADDR_ANY         ((struct ip_addr *)&ip_addr_any)
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):#define IP_ADDR_BROADCAST   ((struct ip_addr *)&ip_addr_broadcast)
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):u8_t ip_addr_isbroadcast(struct ip_addr *, struct netif *);
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip): struct ip_addr {
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):u8_t ip_addr_netcmp(struct ip_addr *addr1, struct ip_addr *addr2,
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):        struct ip_addr *mask);
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):u8_t ip_addr_cmp(struct ip_addr *addr1, struct ip_addr *addr2);
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):void ip_addr_set(struct ip_addr *dest, struct ip_addr *src);
+Ip_addr.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv6\lwip):u8_t ip_addr_isany(struct ip_addr *addr);
+Ip_frag.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\ipv4):ip_frag(struct pbuf *p, struct netif *netif, struct ip_addr *dest)
+Ip_frag.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):#include "lwip/ip_addr.h"
+Ip_frag.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\ipv4\lwip):err_t ip_frag(struct pbuf *p, struct netif *netif, struct ip_addr *dest);
+Locator.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):               struct ip_addr *addr, u16_t port)
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):#include "lwip-1.3.2/src/core/ipv4/ip_addr.c"
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    struct ip_addr ip_addr;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    struct ip_addr net_mask;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    struct ip_addr gw_addr;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):        ip_addr.addr = htonl(g_ulIPAddr);
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):        ip_addr.addr = 0;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    netif_add(&g_sNetIF, &ip_addr, &net_mask, &gw_addr, NULL, stellarisif_init,
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    netif_add(&g_sNetIF, &ip_addr, &net_mask, &gw_addr, NULL, stellarisif_init,
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    return((unsigned long)g_sNetIF.ip_addr.addr);
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    struct ip_addr ip_addr;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    struct ip_addr net_mask;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):    struct ip_addr gw_addr;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):        ip_addr.addr = htonl(g_ulIPAddr);
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):        ip_addr.addr = 0;
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):            netif_set_addr(&g_sNetIF, &ip_addr, &net_mask, &gw_addr);
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):                netif_set_addr(&g_sNetIF, &ip_addr, &net_mask, &gw_addr);
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):                netif_set_addr(&g_sNetIF, &ip_addr, &net_mask, &gw_addr);
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):                netif_set_addr(&g_sNetIF, &ip_addr, &net_mask, &gw_addr);
+Lwiplib.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwipconfig):                netif_set_addr(&g_sNetIF, &ip_addr, &net_mask, &gw_addr);
+Main.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\app):void dns_found(const char *name, struct ip_addr *ipaddr, void *callback_arg)
+Main.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\app):		dns_gethostbyname("www.baidu.com", malloc(sizeof(struct ip_addr)), dns_found, NULL);
+Main.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\app):	struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):void snmp_insert_arpidx_tree(struct netif *ni, struct ip_addr *ip)
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr hip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):void snmp_delete_arpidx_tree(struct netif *ni, struct ip_addr *ip)
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr hip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  ip.addr = ntohl(ni->ip_addr.addr);
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  ip.addr = ntohl(ni->ip_addr.addr);
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr dst;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):    dst.addr = ntohl(ni->ip_addr.addr & ni->netmask.addr);
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr dst;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):    dst.addr = ntohl(ni->ip_addr.addr & ni->netmask.addr);
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr* ipaddr_ret;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  while ((netif != NULL) && !ip_addr_cmp(&ip, &netif->ip_addr))
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          *dst = netif->ip_addr;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr dest;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):            !ip_addr_netcmp(&dest, &(netif->ip_addr), &(netif->netmask)) )
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):            dst->addr = netif->ip_addr.addr & netif->netmask.addr;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):            *dst = netif->ip_addr;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr* ipaddr_ret;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr lip, rip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr ip;
+Mib2.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):          struct ip_addr *dst = value;
+Mib_structs.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):snmp_oidtoip(s32_t *ident, struct ip_addr *ip)
+Mib_structs.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):snmp_iptooid(struct ip_addr *ip, s32_t *ident)
+Msg_in.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):#include "lwip/ip_addr.h"
+Msg_in.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):static void snmp_recv(void *arg, struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *addr, u16_t port);
+Msg_in.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):snmp_recv(void *arg, struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *addr, u16_t port)
+Msg_out.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr dip;
+Msg_out.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):snmp_trap_dst_ip_set(u8_t dst_idx, struct ip_addr *dst)
+Msg_out.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):  struct ip_addr dst_ip;
+Msg_out.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core\snmp):      dst_ip.addr = ntohl(dst_if->ip_addr.addr);
+Netbuf.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):#include "lwip/ip_addr.h"
+Netbuf.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr *addr;
+Netbuf.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr *toaddr;
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):#include "lwip/ip_addr.h"
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr *addrs;
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr addr;
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr addr;
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  HOSTENT_STORAGE struct ip_addr s_hostent_addr;
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  HOSTENT_STORAGE struct ip_addr *s_phostent_addr;
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  s_hostent.h_length = sizeof(struct ip_addr);
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  ret->h_length = sizeof(struct ip_addr);
+Netdb.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr addr;
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):#include "lwip/ip_addr.h"
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):netif_add(struct netif *netif, struct ip_addr *ipaddr, struct ip_addr *netmask,
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr *gw,
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  netif->ip_addr.addr = 0;
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):netif_set_addr(struct netif *netif, struct ip_addr *ipaddr, struct ip_addr *netmask,
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    struct ip_addr *gw)
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):netif_set_ipaddr(struct netif *netif, struct ip_addr *ipaddr)
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  if ((ip_addr_cmp(ipaddr, &(netif->ip_addr))) == 0)
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):      if (ip_addr_cmp(&(pcb->local_ip), &(netif->ip_addr))) {
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):          (ip_addr_cmp(&(lpcb->local_ip), &(netif->ip_addr)))) {
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  ip_addr_set(&(netif->ip_addr), ipaddr);
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    ip4_addr1(&netif->ip_addr),
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    ip4_addr2(&netif->ip_addr),
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    ip4_addr3(&netif->ip_addr),
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    ip4_addr4(&netif->ip_addr)));
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):netif_set_gw(struct netif *netif, struct ip_addr *gw)
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):netif_set_netmask(struct netif *netif, struct ip_addr *netmask)
+Netif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):       struct ip_addr *ipaddr)
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):#include "lwip/ip_addr.h"
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr ip_addr;
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr netmask;
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr gw;
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):       struct ip_addr *ipaddr);
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  err_t (*igmp_mac_filter)( struct netif *netif, struct ip_addr *group, u8_t action);
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):struct netif *netif_add(struct netif *netif, struct ip_addr *ipaddr, struct ip_addr *netmask,
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *gw,
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):netif_set_addr(struct netif *netif,struct ip_addr *ipaddr, struct ip_addr *netmask,
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):    struct ip_addr *gw);
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void netif_set_ipaddr(struct netif *netif, struct ip_addr *ipaddr);
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void netif_set_netmask(struct netif *netif, struct ip_addr *netmask);
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void netif_set_gw(struct netif *netif, struct ip_addr *gw);
+Netif.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t netif_loop_output(struct netif *netif, struct pbuf *p, struct ip_addr *dest_ip);
+Netifapi.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                   struct ip_addr *ipaddr,
+Netifapi.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                   struct ip_addr *netmask,
+Netifapi.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                   struct ip_addr *gw,
+Netifapi.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                        struct ip_addr *ipaddr,
+Netifapi.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                        struct ip_addr *netmask,
+Netifapi.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):                        struct ip_addr *gw)
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *ipaddr;
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *netmask;
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):      struct ip_addr *gw;
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                 struct ip_addr *ipaddr,
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                 struct ip_addr *netmask,
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                 struct ip_addr *gw,
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                 struct ip_addr *ipaddr,
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                 struct ip_addr *netmask,
+Netifapi.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                 struct ip_addr *gw );
+Ppp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif\ppp):pppifOutput(struct netif *netif, struct pbuf *pb, struct ip_addr *ipaddr)
+Ppp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif\ppp):  struct ip_addr our_ipaddr, his_ipaddr, netmask, dns1, dns2;
+Raw.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):#include "lwip/ip_addr.h"
+Raw.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):raw_bind(struct raw_pcb *pcb, struct ip_addr *ipaddr)
+Raw.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):raw_connect(struct raw_pcb *pcb, struct ip_addr *ipaddr)
+Raw.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):                      struct ip_addr *addr),
+Raw.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):raw_sendto(struct raw_pcb *pcb, struct pbuf *p, struct ip_addr *ipaddr)
+Raw.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr *src_ip;
+Raw.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    src_ip = &(netif->ip_addr);
+Raw.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):#include "lwip/ip_addr.h"
+Raw.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):    struct ip_addr *addr);
+Raw.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            raw_bind       (struct raw_pcb *pcb, struct ip_addr *ipaddr);
+Raw.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            raw_connect    (struct raw_pcb *pcb, struct ip_addr *ipaddr);
+Raw.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                                              struct ip_addr *addr),
+Raw.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            raw_sendto     (struct raw_pcb *pcb, struct pbuf *p, struct ip_addr *ipaddr);
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):- err_t tcp_bind(struct tcp_pcb *pcb, struct ip_addr *ipaddr,
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):- err_t tcp_connect(struct tcp_pcb *pcb, struct ip_addr *ipaddr,
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):- err_t udp_bind(struct udp_pcb *pcb, struct ip_addr *ipaddr,
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):- err_t udp_connect(struct udp_pcb *pcb, struct ip_addr *ipaddr,
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):                                         struct ip_addr *addr,
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):- netif_add(struct netif *netif, struct ip_addr *ipaddr,
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):            struct ip_addr *netmask, struct ip_addr *gw,
+Rawapi.txt (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\doc):  Give pointers to cleared ip_addr structures when using DHCP,
+Slipif.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\netif):slipif_output(struct netif *netif, struct pbuf *p, struct ip_addr *ipaddr)
+Snmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void snmp_insert_arpidx_tree(struct netif *ni, struct ip_addr *ip);
+Snmp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void snmp_delete_arpidx_tree(struct netif *ni, struct ip_addr *ip);
+Snmp_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr sip;
+Snmp_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr dip;
+Snmp_msg.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void snmp_trap_dst_ip_set(u8_t dst_idx, struct ip_addr *dst);
+Snmp_structs.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void snmp_oidtoip(s32_t *ident, struct ip_addr *ip);
+Snmp_structs.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):void snmp_iptooid(struct ip_addr *ip, s32_t *ident);
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr naddr;
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr local_addr;
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):    struct ip_addr remote_addr;
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr     *addr;
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):          addr = (struct ip_addr*)&(sin.sin_addr.s_addr);
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):          addr = (struct ip_addr*)&(sin.sin_addr.s_addr);
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr remote_addr;
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  struct ip_addr naddr;
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):          data->err = igmp_joingroup((struct ip_addr*)&(imr->imr_interface.s_addr), (struct ip_addr*)&(imr->imr_multiaddr.s_addr));
+Sockets.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):          data->err = igmp_leavegroup((struct ip_addr*)&(imr->imr_interface.s_addr), (struct ip_addr*)&(imr->imr_multiaddr.s_addr));
+Sockets.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):#include "lwip/ip_addr.h"
+Tcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr remote_ip, local_ip;
+Tcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):tcp_bind(struct tcp_pcb *pcb, struct ip_addr *ipaddr, u16_t port)
+Tcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):tcp_connect(struct tcp_pcb *pcb, struct ip_addr *ipaddr, u16_t port,
+Tcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):tcp_eff_send_mss(u16_t sendmss, struct ip_addr *addr)
+Tcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            tcp_bind    (struct tcp_pcb *pcb, struct ip_addr *ipaddr,
+Tcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            tcp_connect (struct tcp_pcb *pcb, struct ip_addr *ipaddr,
+Tcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):       struct ip_addr *local_ip, struct ip_addr *remote_ip,
+Tcp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):u16_t tcp_eff_send_mss(u16_t sendmss, struct ip_addr *addr);
+Tcp_helper.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):tcp_create_segment(struct ip_addr* src_ip, struct ip_addr* dst_ip,
+Tcp_helper.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):tcp_set_state(struct tcp_pcb* pcb, enum tcp_state state, struct ip_addr* local_ip,
+Tcp_helper.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):                   struct ip_addr* remote_ip, u16_t local_port, u16_t remote_port)
+Tcp_helper.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):struct pbuf* tcp_create_segment(struct ip_addr* src_ip, struct ip_addr* dst_ip,
+Tcp_helper.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):void tcp_set_state(struct tcp_pcb* pcb, enum tcp_state state, struct ip_addr* local_ip,
+Tcp_helper.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):                   struct ip_addr* remote_ip, u16_t local_port, u16_t remote_port);
+Tcp_in.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):#include "lwip/ip_addr.h"
+Tcp_in.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  if (inet_chksum_pseudo(p, (struct ip_addr *)&(iphdr->src),
+Tcp_in.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):      (struct ip_addr *)&(iphdr->dest),
+Tcp_in.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):        inet_chksum_pseudo(p, (struct ip_addr *)&(iphdr->src), (struct ip_addr *)&(iphdr->dest),
+Tcp_out.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):#include "lwip/ip_addr.h"
+Tcp_out.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    ip_addr_set(&(pcb->local_ip), &(netif->ip_addr));
+Tcp_out.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr *local_ip, struct ip_addr *remote_ip,
+Test_tcp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):  struct ip_addr remote_ip, local_ip;
+Test_tcp_oos.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):  struct ip_addr remote_ip, local_ip;
+Test_tcp_oos.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\test\unit\tcp):  struct ip_addr remote_ip, local_ip;
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):#include "lwip/ip_addr.h"
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  if (pcb != NULL || ip_addr_cmp(&inp->ip_addr, &iphdr->dest)) {
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):      if (inet_chksum_pseudo_partial(p, (struct ip_addr *)&(iphdr->src),
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):                             (struct ip_addr *)&(iphdr->dest),
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):        if (inet_chksum_pseudo(p, (struct ip_addr *)&(iphdr->src),
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):                               (struct ip_addr *)&(iphdr->dest),
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr *dst_ip, u16_t dst_port)
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr *dst_ip, u16_t dst_port, struct netif *netif)
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):  struct ip_addr *src_ip;
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    src_ip = &(netif->ip_addr);
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    if (!ip_addr_cmp(&(pcb->local_ip), &(netif->ip_addr))) {
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):udp_bind(struct udp_pcb *pcb, struct ip_addr *ipaddr, u16_t port)
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):udp_connect(struct udp_pcb *pcb, struct ip_addr *ipaddr, u16_t port)
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):    pcb->local_ip = netif->ip_addr;
+Udp.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):                       struct ip_addr *addr, u16_t port),
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):#include "lwip/ip_addr.h"
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):  struct ip_addr multicast_ip;
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):    struct ip_addr *addr, u16_t port);
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            udp_bind       (struct udp_pcb *pcb, struct ip_addr *ipaddr,
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            udp_connect    (struct udp_pcb *pcb, struct ip_addr *ipaddr,
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):                 struct ip_addr *addr,
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            udp_sendto_if  (struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *dst_ip, u16_t dst_port, struct netif *netif);
+Udp.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t            udp_sendto     (struct udp_pcb *pcb, struct pbuf *p, struct ip_addr *dst_ip, u16_t dst_port);
+Webclient.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\webclient):int hc_open(struct ip_addr remoteIP, char *Page, char *PostVars, void (* returnpage)(u8_t, hc_errormsg, char *, u16_t))
+Webclient.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\webclient):int hc_open(struct ip_addr, char *, char *, void (*)(u8_t, hc_errormsg, char *, u16_t));
+---- dns_gethostbyname Matches (4 in 4 files) ----
+Api_msg.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\api):  *msg->err = dns_gethostbyname(msg->name, msg->addr, do_dns_found, msg);
+Dns.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\core):dns_gethostbyname(const char *hostname, struct ip_addr *addr, dns_found_callback found,
+Dns.h (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\lwip-1.3.2\src\include\lwip):err_t          dns_gethostbyname(const char *hostname, struct ip_addr *addr,
+Main.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\app):		dns_gethostbyname("www.baidu.com", malloc(sizeof(struct ip_addr)), dns_found, NULL);
+---- page_recv Matches (2 in 1 files) ----
+Main.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\app):void page_recv(u8_t num, hc_errormsg errormsg, char * page, u16_t len)
+Main.c (e:\arm\lm3s8962projects\network_lm3s8962\lm3s_lwip_client\source\app):	    hc_open(*ipaddr, "/", NULL, page_recv);	

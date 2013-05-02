@@ -68,7 +68,37 @@ __error__(char *pcFilename, unsigned long ulLine)
 }
 #endif
 
+
+//*****************************************************************************
+//
+// Display a uIP type IP Address.
+//
+//*****************************************************************************
+static void DisplayIPAddress(void *ipaddr, unsigned long ulCol, unsigned long ulRow)
+{
+    char pucBuf[16];
+    unsigned char *pucTemp = (unsigned char *)ipaddr;
+
+    //
+    // Convert the IP Address into a string.
+    //
+    usprintf(pucBuf, "%d.%d.%d.%d", pucTemp[0], pucTemp[1], pucTemp[2],
+             pucTemp[3]);
+
+	//
+	UARTprintf("IP Addr: %d.%d.%d.%d\n", pucTemp[0], pucTemp[1], pucTemp[2],
+             pucTemp[3]);
+
+    //
+    // Display the string.
+    //
+    RIT128x96x4StringDraw(pucBuf, ulCol, ulRow, 15);
+}
+
+
+//
 // This function ll be called by the webclient page when the page is received
+//
 void page_recv(u8_t num, hc_errormsg errormsg, char * page, u16_t len)
 {
 	if (page) 
@@ -78,21 +108,56 @@ void page_recv(u8_t num, hc_errormsg errormsg, char * page, u16_t len)
 	else 
 	{	
 		UARTprintf("error: ");
-		if(errormsg == OUT_MEM) UARTprintf("OUT MEM");
-		else if(errormsg == TIMEOUT) UARTprintf("TIME OUT");
-		else if(errormsg == NOT_FOUND) UARTprintf("NO 200 OK");
-		else if(errormsg == GEN_ERROR) UARTprintf("GEN ERROR");
-		else UARTprintf("?? ERROR");
+		
+		if (errormsg == OUT_MEM) 
+		{
+			UARTprintf("OUT MEM");
+		}
+		else if (errormsg == TIMEOUT)
+		{
+			UARTprintf("TIME OUT");
+		}
+		else if (errormsg == NOT_FOUND) 
+		{
+			UARTprintf("NO 200 OK");
+		}
+		else if (errormsg == GEN_ERROR)
+		{
+			UARTprintf("GEN ERROR");
+		}
+		else 
+		{
+			UARTprintf("?? ERROR");
+		}
+		
 		UARTprintf("\n");
 	}
 }
 
 
+//
+//
+//
 void dns_found(const char *name, struct ip_addr *ipaddr, void *callback_arg)
 {
+	char pucBuf[16];
+	unsigned char *pucTemp;
+
 	if (ipaddr)
 	{
+	
 		UARTprintf("IP hostname %s found ...\n", name);
+		// Convert the IP Address into a string.
+		pucTemp = (unsigned char *)&ipaddr;
+    	usprintf(pucBuf, "%d.%d.%d.%d", pucTemp[0], pucTemp[1], pucTemp[2], pucTemp[3]);
+
+		// Display the string.
+		RIT128x96x4StringDraw(pucBuf, 18, 24, 15);
+		
+		// Display the string.
+    	UARTprintf("%s\n", pucBuf);
+
+
 	
 		// Now we can request our page
 		UARTprintf("Get webpage ...\n");
@@ -116,6 +181,7 @@ void lwIPHostTimerHandler(void)
     unsigned long ulIPAddress;
 	char pucBuf[16];
 	unsigned char *pucTemp;
+	struct ip_addr host_server_address;
 
     ulIPAddress = lwIPLocalIPAddrGet();
 
@@ -129,10 +195,14 @@ void lwIPHostTimerHandler(void)
     	usprintf(pucBuf, "%d.%d.%d.%d", pucTemp[0], pucTemp[1], pucTemp[2], pucTemp[3]);
 
 		// Display the string.
+		RIT128x96x4StringDraw(pucBuf, 18, 24, 15);
+		
+		// Display the string.
     	UARTprintf("%s\n", pucBuf);
-
 		UARTprintf("Request IP hostname ...\n");
-		dns_gethostbyname("pbeii.be", malloc(sizeof(struct ip_addr)), dns_found, NULL);
+		//
+		//dns_gethostbyname("www.baidu.com", malloc(sizeof(struct ip_addr)), dns_found, NULL);
+		dns_gethostbyname("www.baidu.com", &host_server_address, dns_found, NULL);
     }
 }
 
@@ -168,9 +238,9 @@ int main(void)
     // Initialize the OLED display.
     //
   	RIT128x96x4Init(1000000);
-    RIT128x96x4StringDraw("Web-Based I/O Control", 0, 0, 15);
-    RIT128x96x4StringDraw("Browser Message:", 0, 53, 15);
-	RIT128x96x4StringDraw("The Chip Temperature:", 0, 80, 15);
+    RIT128x96x4StringDraw("lwIP WebClient", 0, 0, 15);
+    //RIT128x96x4StringDraw("Browser Message:", 0, 53, 15);
+	//RIT128x96x4StringDraw("The Chip Temperature:", 0, 80, 15);
 
     // Initialize the UART for debug output.
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
@@ -257,6 +327,11 @@ int main(void)
     pucMACArray[3] = ((ulUser1 >>  0) & 0xff);
     pucMACArray[4] = ((ulUser1 >>  8) & 0xff);
     pucMACArray[5] = ((ulUser1 >> 16) & 0xff);
+
+	UARTprintf("Start...\n");
+
+	
+    UARTprintf("lwIPInit-->\n");
     
     //
     // Initialze the lwIP library, using DHCP.
@@ -277,10 +352,11 @@ int main(void)
 	// Config DNS servers (208.67.222.222 = OpenDNS)
 	//
 	dns_init();
-	IP4_ADDR(&ip, 208,67,222,222);
+	//IP4_ADDR(&ip, 208,67,222,222);
+	IP4_ADDR(&ip, 8, 8, 8, 8);
 	dns_setserver(0, &ip); 
 
-    UARTprintf("enet lwip http example\n");
+    UARTprintf("lwip http example\n");
 
     //
     // Loop forever.  All the work is done in interrupt handlers.
