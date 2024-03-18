@@ -136,8 +136,8 @@ void OSTaskStatHook (void)
 ** Descriptions:            This function is called by either OSTaskCreate() or OSTaskCreateExt() to    **
 **                          initialize the stack frame of the task being created.                       **
 **                          This function is highly processor specific.                                 **     
-** input parameters:        task£º  A pointer to the task code                                          **
-**                          p_arg£º A pointer to a user supplied data area that will be passed to the   **
+** input parameters:        taskï¼š  A pointer to the task code                                          **
+**                          p_argï¼š A pointer to a user supplied data area that will be passed to the   **
 **                                  task when the task first executes.                                  **
 **                          ptos:   A pointer to the top of the stack. For this port, it's the highest  ** 
 **                                  valid address of the stack.                                         **

@@ -112,7 +112,6 @@ static void taskStart (void  *parg)
                   &Task_TempStk[TASK_TEMP_STK_SIZE - 1],
                   TASK_TEMP_PRIO);   
      
-
     OSTaskCreate(taskRTC, (void*)0,
                  &Task_RTCStk[TASK_RTC_STK_SIZE - 1],
                  TASK_RTC_PRIO); 

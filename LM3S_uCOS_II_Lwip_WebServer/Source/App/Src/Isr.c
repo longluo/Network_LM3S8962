@@ -38,8 +38,8 @@ void keyISR (void)
     OS_CPU_SR  cpu_sr;
     #endif 
     
-    OS_ENTER_CRITICAL();      // πÿ÷–∂œ                      
-    OSIntNesting++;           // ≤Ÿ◊˜œµÕ≥÷–∂œ«∂Ã◊≤„ ˝º”1     
+    OS_ENTER_CRITICAL();      // ÂÖ≥‰∏≠Êñ≠                      
+    OSIntNesting++;           // Êìç‰ΩúÁ≥ªÁªü‰∏≠Êñ≠ÂµåÂ•óÂ±ÇÊï∞Âä†1     
     OS_EXIT_CRITICAL();
     
     IntStatus = GPIOPinIntStatus(GPIO_PORTE_BASE,true);

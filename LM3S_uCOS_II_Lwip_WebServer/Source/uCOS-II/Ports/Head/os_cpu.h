@@ -7,19 +7,19 @@
 ** File Name:               os_cpu.h
 ** Last modified Date:      2007.01.18
 ** Last Version:            1.0
-** Description:             Header file of the ported code  ÒÆÖ²´úÂëÍ·ÎÄ¼ş
+** Description:             Header file of the ported code  ç§»æ¤ä»£ç å¤´æ–‡ä»¶
 ** 
 **--------------------------------------------------------------------------------------------------------
-** Created By:              Steven Zhou ÖÜÉÜ¸Õ
+** Created By:              Steven Zhou å‘¨ç»åˆš
 ** Created date:            2007.01.18
 ** Version:                 1.0
-** Descriptions:            The original version ³õÊ¼°æ±¾
+** Descriptions:            The original version åˆå§‹ç‰ˆæœ¬
 **
 **--------------------------------------------------------------------------------------------------------
 ** Modified by:             Ni Likao
 ** Modified date:           2007.10.29
 ** Version:                 1.1
-** Description:             The second version µÚ¶ş°æ
+** Description:             The second version ç¬¬äºŒç‰ˆ
 **
 *********************************************************************************************************/
 
@@ -34,9 +34,9 @@
 
 
 /*********************************************************************************************************
-  Date types(Compiler specific)  Êı¾İÀàĞÍ£¨ºÍ±àÒëÆ÷Ïà¹Ø£©                
+  Date types(Compiler specific)  æ•°æ®ç±»å‹ï¼ˆå’Œç¼–è¯‘å™¨ç›¸å…³ï¼‰                
 *********************************************************************************************************/
-typedef unsigned char  BOOLEAN;             /*  Boolean ²¼¶û±äÁ¿            */
+typedef unsigned char  BOOLEAN;             /*  Boolean å¸ƒå°”å˜é‡            */
 typedef unsigned char  INT8U;               /*  Unsigned  8 bit quantity    */                       
 typedef signed   char  INT8S;                                           /*  Signed    8 bit quantity    */                         
 typedef unsigned short INT16U;                                          /*  Unsigned 16 bit quantity    */
@@ -46,25 +46,25 @@ typedef signed   int   INT32S;                                          /*  Sign
 typedef float          FP32;                                            /*  Single precision floating point */
 typedef double         FP64;                                            /*  Double precision floating point */
 
-typedef unsigned int   OS_STK;                                          /*  Each stack entry is 32-bit wide  ¶ÑÕ»ÊÇ32Î»¿í¶È        */   
+typedef unsigned int   OS_STK;                                          /*  Each stack entry is 32-bit wide  å †æ ˆæ˜¯32ä½å®½åº¦        */   
 typedef unsigned int   OS_CPU_SR;                                       /*  Define size of CPU status register (PSR = 32 bits)    */
 
 
 /*********************************************************************************************************
-  Method of critical section management  ÁÙ½çÇø¹ÜÀí·½·¨                
+  Method of critical section management  ä¸´ç•ŒåŒºç®¡ç†æ–¹æ³•                
 *********************************************************************************************************/
 #define  OS_CRITICAL_METHOD  4
 
 
 /*********************************************************************************************************
-  Other definitions  ÆäËû¶¨Òå         
+  Other definitions  å…¶ä»–å®šä¹‰         
 *********************************************************************************************************/
 #define  OS_STK_GROWTH        1            
 #define  OS_TASK_SW()         OSCtxSw()
 
 
 /*********************************************************************************************************
-  Prototypes(see OS_CPU_A.ASM)  Ô­ĞÍÉùÃ÷£¨¼ûOS_CPU_A.ASM£©                
+  Prototypes(see OS_CPU_A.ASM)  åŸå‹å£°æ˜ï¼ˆè§OS_CPU_A.ASMï¼‰                
 *********************************************************************************************************/
 #if OS_CRITICAL_METHOD == 4
     void OS_ENTER_CRITICAL (void);
